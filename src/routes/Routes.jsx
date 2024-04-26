@@ -1,5 +1,5 @@
 
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, useParams } from "react-router-dom";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Root from "../mainLayout/Root";
@@ -9,6 +9,8 @@ import ErrorPage from "../components/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import AllCraftitems from "../pages/allCraftItems/AllCraftitems";
 import MyCraftList from "../pages/myCraftList/MyCraftList";
+import AddCraftitem from "../pages/addCraftItem/AddCraftitem";
+import CraftCardDetails from "../components/CraftCardDetails";
 
 const router = createBrowserRouter([
     {
@@ -28,13 +30,19 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allCraftItems',
-                element: <AllCraftitems></AllCraftitems>
+                element: <AllCraftitems></AllCraftitems>,
+                loader: () => fetch('http://localhost:5000/coffee')
+            },
+            {
+                path: '/CraftCardDetails/:id',
+                element: <CraftCardDetails></CraftCardDetails>,
+                loader: () => fetch('http://localhost:5000/coffee')
             },
 
             
             {
                 path: '/addCraftItem',
-                element: <AllCraftitems></AllCraftitems>
+                element: <AddCraftitem></AddCraftitem>
             },
 
             

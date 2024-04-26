@@ -68,10 +68,10 @@ const Login = () => {
     return (
         <div>
             <section>
-                <div className="shadow-lg my-5 rounded-2xl flex items-center p-3 mx-aut ">
+                <div className="shadow-lg my-5 rounded-2xl flex items-center p-3 mx-auto ">
                     <div className="px-4 py-2 mx-auto justify-center items-center border rounded-xl bg-gray-300">
-                        <h2 className="font-bold text-3xl text-[#002D74]">Login</h2>
-                        <p className="text-sm mt-4 text-[#002D74]">If you already a member, easily log in now.</p>
+                        <h2 className="font-bold text-3xl text-[#002D74] text-center">Login</h2>
+                        <p className="text-sm mt-4 text-[#002D74] text-center">If you already a member, easily log in now.</p>
 
                         {/* Error Alert */}
                         {showError && (

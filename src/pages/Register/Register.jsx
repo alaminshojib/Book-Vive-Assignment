@@ -70,7 +70,7 @@ const Register = () => {
             <section>
                 <div className="shadow-lg my-5 rounded-2xl flex items-center p-3 mx-auto">
                     <div className="px-4 mx-auto justify-center items-center border rounded-xl bg-gray-300">
-                        <h2 className="font-bold text-3xl text-[#002D74] mt-5">Register</h2>
+                        <h2 className="font-bold text-3xl text-[#002D74] mt-5 text-center">Register</h2>
                         <form onSubmit={handleRegister} className="flex flex-col gap-4 w-72">
                             <input
                                 type="text"
