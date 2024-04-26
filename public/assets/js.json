@@ -1,0 +1,134 @@
+[
+    {
+        "subcategory": "Landscape Painting",
+        "item_name": "Mountain View Canvas",
+        "image_url": " https://i.ibb.co/zR2XxkW/mountain-view-canvas.webp",
+        "description": "A stunning canvas depicting a serene mountain landscape.",
+        "price": 50.00,
+        "rating": 4.5,
+        "customization": true,
+        "processing_time": "1-2 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Landscape Painting",
+        "item_name": "Forest-based Landscape Painting",
+        "image_url": "https://i.ibb.co/6FJGWv3/forest-landscape-painting.jpg",
+        "description": "A beautiful painting capturing the lush greenery of a forest.",
+        "price": 65.00,
+        "rating": 4.8,
+        "customization": false,
+        "processing_time": "3-5 days",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Portrait Drawing",
+        "item_name": "Pencil Sketch Portrait",
+        "image_url": " https://i.ibb.co/ZBRn4z7/pencil-sketch-portrait.jpg",
+        "description": "A detailed pencil sketch capturing the likeness of a person.",
+        "price": 80.00,
+        "rating": 4.7,
+        "customization": true,
+        "processing_time": "2-3 weeks",
+        "stock_status": "Made to Order"
+    },
+    {
+        "subcategory": "Portrait Drawing",
+        "item_name": "Ink Outline Portrait",
+        "image_url": "https://i.ibb.co/hMxHnGS/ink-outline-portrait.jpg",
+        "description": "An elegant portrait created with ink outlines.",
+        "price": 70.00,
+        "rating": 4.6,
+        "customization": false,
+        "processing_time": "1-2 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Watercolor Painting",
+        "item_name": "Floral Watercolor Art",
+        "image_url": "  https://i.ibb.co/Xz3TgRQ/floral-watercolor-art.jpg",
+        "description": "Vibrant watercolor artwork featuring various flowers.",
+        "price": 55.00,
+        "rating": 4.4,
+        "customization": true,
+        "processing_time": "2-4 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Watercolor Painting",
+        "item_name": "Animal Watercolor Portrait",
+        "image_url": " https://i.ibb.co/5BBXWs6/animal-watercolor-portrait.jpg",
+        "description": "Charming watercolor portrait of an animal.",
+        "price": 75.00,
+        "rating": 4.9,
+        "customization": true,
+        "processing_time": "3-5 weeks",
+        "stock_status": "Made to Order"
+    },
+    {
+        "subcategory": "Oil Painting",
+        "item_name": "Realistic Oil Portrait",
+        "image_url": "https://i.ibb.co/k4qF7Fm/realistic-oil-portrait.png",
+        "description": "Impressive oil painting capturing the realistic portrayal of a person.",
+        "price": 120.00,
+        "rating": 4.8,
+        "customization": true,
+        "processing_time": "2-3 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Oil Painting",
+        "item_name": "Abstract Oil Painting",
+        "image_url": "https://i.ibb.co/wwdDVbs/abstract-oil-painting.jpg",
+        "description": "Surreal abstract oil painting with vibrant colors and bold strokes.",
+        "price": 90.00,
+        "rating": 4.7,
+        "customization": false,
+        "processing_time": "1-2 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Charcoal Sketching",
+        "item_name": "Figure Charcoal Sketch",
+        "image_url": "https://i.ibb.co/qk68CMc/figure-charcoal-sketch.jpg",
+        "description": "Expressive charcoal sketch capturing the human figure.",
+        "price": 60.00,
+        "rating": 4.6,
+        "customization": true,
+        "processing_time": "2-4 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Charcoal Sketching",
+        "item_name": "Architectural Charcoal Drawing",
+        "image_url": " https://i.ibb.co/qmww4Hz/architectural-charcoal-drawing.jpg",
+        "description": "Detailed charcoal drawing showcasing architectural elements.",
+        "price": 70.00,
+        "rating": 4.5,
+        "customization": false,
+        "processing_time": "1-2 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Cartoon Drawing",
+        "item_name": "Comic Strip Drawing",
+        "image_url": " https://i.ibb.co/Bt8pc7w/comic-strip-drawing.webp",
+        "description": "Entertaining comic strip illustration with vibrant characters.",
+        "price": 45.00,
+        "rating": 4.3,
+        "customization": true,
+        "processing_time": "1-3 weeks",
+        "stock_status": "In stock"
+    },
+    {
+        "subcategory": "Cartoon Drawing",
+        "item_name": "Superhero Cartoon Design",
+        "image_url": "https://i.ibb.co/Jm4VRf8/superhero-cartoon-design.webp",
+        "description": "Dynamic superhero illustration in a cartoon style.",
+        "price": 55.00,
+        "rating": 4.9,
+        "customization": true,
+        "processing_time": "2-4 weeks",
+        "stock_status": "Made to Order"
+    }
+]

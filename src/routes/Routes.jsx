@@ -11,6 +11,7 @@ import AllCraftitems from "../pages/allCraftItems/AllCraftitems";
 import MyCraftList from "../pages/myCraftList/MyCraftList";
 import AddCraftitem from "../pages/addCraftItem/AddCraftitem";
 import CraftCardDetails from "../components/CraftCardDetails";
+import UpdateCraftDetails from "../components/UpdateCraftDetails";
 
 const router = createBrowserRouter([
     {
@@ -31,12 +32,12 @@ const router = createBrowserRouter([
             {
                 path: '/allCraftItems',
                 element: <AllCraftitems></AllCraftitems>,
-                loader: () => fetch('http://localhost:5000/coffee')
+                loader: () => fetch('http://localhost:5000/artCrafts')
             },
             {
                 path: '/CraftCardDetails/:id',
                 element: <CraftCardDetails></CraftCardDetails>,
-                loader: () => fetch('http://localhost:5000/coffee')
+                loader: () => fetch('http://localhost:5000/artCrafts')
             },
 
             
@@ -48,7 +49,15 @@ const router = createBrowserRouter([
             
             {
                 path: '/myCraftList',
-                element: <MyCraftList></MyCraftList>
+                element: <MyCraftList></MyCraftList>,
+                loader: () => fetch('http://localhost:5000/artCrafts')
+
+            },
+            {
+                path: '/updateCraftDetails/:id',
+                element: <UpdateCraftDetails></UpdateCraftDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/artCrafts/${params.id}`)
+
             },
 
             

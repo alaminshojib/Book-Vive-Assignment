@@ -4,8 +4,8 @@ import { useLoaderData } from 'react-router-dom';
 
 
 const AllCraftitems = () => {
-    const loadedCoffees = useLoaderData();
-    const [coffees, setCoffees] = useState(loadedCoffees);
+    const loadedcrafts = useLoaderData();
+    const [crafts, setCrafts] = useState(loadedcrafts);
 
 
     return (
@@ -35,11 +35,11 @@ const AllCraftitems = () => {
                         <tbody>
                        
                             {
-                                coffees.map(coffee => <CraftCard
-                                    key={coffee._id}
-                                    coffee={coffee}
-                                    coffees={coffees}
-                                    setCoffees={setCoffees}
+                                crafts.map(craft => <CraftCard
+                                    key={craft._id}
+                                    craft={craft}
+                                    crafts={crafts}
+                                    setCrafts={setCrafts}
                                 ></CraftCard>)
                             }
 
