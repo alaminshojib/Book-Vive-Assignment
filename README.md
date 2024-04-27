@@ -1,12 +1,12 @@
-# Crafty Creations
+# C͡r͡a͡ƒ͡t͡i͡q͡u͡e
 
-This is the repository for the Crafty Creations web application.
+This is the repository for the C͡r͡a͡ƒ͡t͡i͡q͡u͡e web application.
 
-Live Site Link: [Crafty Creations](https://art-craft-store-client.web.app/)
+Live Site Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Website](https://art-craft-store-client.web.app/)
 
-Server Link: [Crafty Creations Server](https://art-craft-store-server-delta.vercel.app)
+Server Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Server](https://art-craft-store-server-delta.vercel.app)
 
-Repository Link: [Crafty Creations Repository](https://github.com/programming-hero-web-course-4/b9a10-server-side-alaminshojib)
+Repository Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Repository](https://github.com/programming-hero-web-course-4/b9a10-server-side-alaminshojib)
 
 ## Features
 
