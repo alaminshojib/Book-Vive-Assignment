@@ -19,7 +19,7 @@ const MySingleCraftCard = ({ craft, crafts, setCrafts }) => {
 
             if (result.isConfirmed) {
                 setIsDeleting(true);
-                const response = await fetch(`http://localhost:5000/artCrafts/${_id}`, {
+                const response = await fetch(`https://art-craft-store-server-delta.vercel.app/artCrafts/${_id}`, {
                     method: 'DELETE'
                 });
 

@@ -24,10 +24,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/homeCrafts')
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/homeCrafts')
 
             },
-           
+
             {
                 path: '/updateProfile',
                 element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
@@ -35,34 +35,34 @@ const router = createBrowserRouter([
             {
                 path: '/allCraftItems',
                 element: <AllCraftitems></AllCraftitems>,
-                loader: () => fetch('http://localhost:5000/artCrafts')
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
             },
             {
                 path: '/CraftCardDetails/:id',
                 element: <CraftCardDetails></CraftCardDetails>,
-                loader: () => fetch('http://localhost:5000/artCrafts')
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
             },
 
-            
+
             {
                 path: '/addCraftItem',
                 element: <AddCraftitem></AddCraftitem>
             },
 
-            
+
             {
                 path: '/myCraftList',
                 element: <MyCraftList></MyCraftList>,
-                loader: () => fetch('http://localhost:5000/artCrafts')
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
 
             },
             {
                 path: '/updateCraftDetails/:id',
                 element: <UpdateCraftDetails></UpdateCraftDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/artCrafts/${params.id}`)
+                loader: ({ params }) => fetch(`https://art-craft-store-server-delta.vercel.app/artCrafts/${params.id}`)
 
             },
-          
+
 
 
             {

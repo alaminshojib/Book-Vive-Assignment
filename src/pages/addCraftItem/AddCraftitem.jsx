@@ -41,7 +41,7 @@ const AddCraftitem = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/artCrafts', {
+            const response = await fetch('https://art-craft-store-server-delta.vercel.app/artCrafts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

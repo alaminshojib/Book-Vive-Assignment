@@ -23,7 +23,7 @@ const UpdateCraftDetails = () => {
         // Fetch craft details based on ID and populate the form
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/artCrafts/${id}`);
+                const response = await fetch(`https://art-craft-store-server-delta.vercel.app/artCrafts/${id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch craft details');
                 }
@@ -51,7 +51,7 @@ const UpdateCraftDetails = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:5000/artCrafts/${id}`, {
+            const response = await fetch(`https://art-craft-store-server-delta.vercel.app/artCrafts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
