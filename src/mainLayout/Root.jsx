@@ -18,7 +18,7 @@ function Root() {
         <div className={isDarkMode ? 'dark' : 'light' }>
             
             <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}></Navbar>
-            <div className="bg-[url(https://i.ibb.co/KxCznz0/wave-haikei.png)] bg-no-repeat bg-cover"><Outlet></Outlet></div>
+            <div><Outlet></Outlet></div>
             <Footer></Footer>
         </div>
     );
