@@ -43,7 +43,7 @@ const CraftCardDetails = () => {
       <div className=" justify-center m-auto px-5  p-3 mb-3 min-h-screen items-center flex-col flex">
         <section className="lg:flex dark:bg-gray-50 border  rounded-lg">
           <div className=' p-5 flex-col items-center my-auto w-80'>
-            <img alt="" className="object-cover w-full rounded-2xl mx-auto p-2 my-5 " src={image} />
+            <img alt="Image" className="object-cover w-full rounded-2xl mx-auto p-2 my-5 " src={image} />
           </div>
 
           <div className="flex flex-col flex-1 mx-auto drop-shadow-xl p-8 ">
@@ -56,12 +56,12 @@ const CraftCardDetails = () => {
             </h3>
             <h4 className='mb-1 font-semibold text-md'> Category : <span className='font-normal'>{subcategory_Name} </span></h4>
             <h4 className='mb-1 font-semibold text-md'>Status : <span className='font-normal'>{stockStatus} </span></h4>
-            <h4 className='mb-1 font-semibold text-md'>Status : <span className='font-normal'>Processing Time :{processing_time} Weeks </span></h4>
+            <h4 className='mb-1 font-semibold text-md'>Processing Time : <span className="font-normal">{processing_time} Weeks </span></h4>
             <h4 className='my-1 font-semibold text-md'>Rating : <span className='font-normal'>{rating}</span></h4>
             <h4 className='my-1 font-semibold text-md'>Customization : <span className='font-normal'>{customization}</span></h4>
             <h4 className='my-1 font-semibold text-md'>Person Name : <span className='font-normal'>{userName}</span></h4>
             <h4 className='my-1 font-semibold text-md'>Person's Email : <span className='font-normal'>{userEmail}</span></h4>
-            <p className='my-1 font-semibold text-md'>Short Description : <span className='font-normal'>{short_description}</span></p>
+            <p className='my-1 font-semibold text-md max-w-md'>Short Description : <span className='font-normal'>{short_description}</span></p>
 
             <div className='flex gap-5 justify-start items-center my-5'>
               <button

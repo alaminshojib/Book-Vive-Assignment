@@ -14,22 +14,20 @@ const Home = () => {
         });
     }, []);
 
-
-const craft = useLoaderData()
-
+    const craft = useLoaderData();
 
     return (
         <div>
-            <Slider ></Slider>
-            <MainCraftSection key={craft._id} craft={craft}></MainCraftSection>
-            <section>
-                <div className="mx-auto flex flex-col justify-center text-center px-5">
-                    <h1 className="font-bold text-2xl py-5 text-white" >Explore the Premier Apartments and Experience Unmatched Luxury</h1>
-                    <p className="max-w-3xl text-center mx-auto text-gray-400">Immerse yourself in the realm of luxury living with our exceptional listings featuring a diverse selection of opulent apartments and exquisite villas. Uncover the perfect home that reflects your unique taste and lifestyle, whether it’s a chic apartment or a lavish villa.</p>
+            <Slider key={craft._id} craft={craft} />
+            <MainCraftSection key={craft._id} craft={craft} />
+            <section className="px-4 lg:px-0">
+                <div className="mx-auto flex flex-col justify-center text-center py-8">
+                    <h1 className="font-bold text-2xl text-white">Explore the Premier Apartments and Experience Unmatched Luxury</h1>
+                    <p className="max-w-lg mx-auto text-gray-400">Immerse yourself in the realm of luxury living with our exceptional listings featuring a diverse selection of opulent apartments and exquisite villas. Uncover the perfect home that reflects your unique taste and lifestyle, whether it’s a chic apartment or a lavish villa.</p>
                 </div>
             </section>
 
-            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-2 lg:p-10 p-2">
+            <div className="container mx-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-2 lg:p-10 p-2">
                 {/* {estate.map((estateCard) => (
                     <div key={estateCard.id} data-aos="zoom-in">
                         <EstateCard estateCard={estateCard} />

@@ -89,7 +89,7 @@ const AddCraftitem = () => {
 
 
                 <form onSubmit={handleSubmit}>
-                    <div className='grid grid-cols-2 justify-center items-center  gap-5 w-2/3 mx-auto'>
+                    <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center  gap-5 md:w-2/3 w-11/12 mx-auto'>
                         <div>
                             <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
                                 <div className="flex">

@@ -70,13 +70,14 @@ const UpdateCraftDetails = () => {
             console.log(data);
 
             if (response.status === 200) {
+                navigate('/myCraftList');
                 Swal.fire({
                     title: 'Success!',
                     text: 'Craft Updated Successfully',
                     icon: 'success',
                     confirmButtonText: 'Done',
                 });
-                navigate('/myCraftList');
+               
 
             }
         } catch (error) {
@@ -94,7 +95,7 @@ const UpdateCraftDetails = () => {
         <div className='py-5'>
             <h2 className="text-3xl font-semibold text-center p-5 dark:text-white">Update Craft Item :</h2>
             <form onSubmit={handleUpdateCraft}>
-                <div className='grid grid-cols-2 justify-center items-center  gap-5 w-2/3 mx-auto'>
+                <div className='grid lg:grid-cols-2 grid-cols-1 justify-center items-center  gap-5 md:w-2/3 w-11/12 mx-auto'>
                     <div>
                         <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
                             <div className="flex">

@@ -16,7 +16,7 @@ const MainCraftSection = ({ craft }) => {
     <div>
       <section>
         <div>
-          <h1 className='mx-auto flex flex-col justify-center items-center m-5 text-3xl font-bold'>
+          <h1 className='mx-auto flex flex-col justify-center items-center m-5 text-3xl font-bold text-white'>
             Painting and Drawing
           </h1>
           <fieldset className="space-y-1 text-gray-100 dark:text-gray-800 w-80 mx-auto">
@@ -35,7 +35,7 @@ const MainCraftSection = ({ craft }) => {
           </fieldset>
         </div>
         <div>
-          <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-2 lg:p-10 p-2">
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-2 lg:p-12 p-2">
             {filteredCraft.map((craft) => (
               <div key={craft._id} data-aos="zoom-in">
                 <CraftItemsSection craft={craft} />
