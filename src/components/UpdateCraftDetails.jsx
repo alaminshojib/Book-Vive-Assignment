@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -6,7 +6,6 @@ const UpdateCraftDetails = () => {
     const { id } = useParams();
 
     const [formData, setFormData] = useState({
-        _id: '',
         image: '',
         item_name: '',
         subcategory_Name: '',
@@ -19,6 +18,29 @@ const UpdateCraftDetails = () => {
         userEmail: '',
         userName: '',
     });
+
+    useEffect(() => {
+        // Fetch craft details based on ID and populate the form
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/artCrafts/${id}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch craft details');
+                }
+                const data = await response.json();
+                setFormData(data);
+            } catch (error) {
+                console.error('Error fetching craft details:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Failed to fetch craft details. Please try again later.',
+                });
+            }
+        };
+
+        fetchData();
+    }, [id]);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -44,7 +66,7 @@ const UpdateCraftDetails = () => {
             const data = await response.json();
             console.log(data);
 
-            if (data.modifiedCount > 0) {
+            if (response.status === 200) {
                 Swal.fire({
                     title: 'Success!',
                     text: 'Craft Updated Successfully',
@@ -61,6 +83,7 @@ const UpdateCraftDetails = () => {
             });
         }
     };
+
 
     return (
         <div>

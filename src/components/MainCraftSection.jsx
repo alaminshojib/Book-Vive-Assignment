@@ -1,56 +1,51 @@
-import React from 'react';
+import { useState } from 'react';
+import CraftItemsSection from './CraftItemsSection';
 
-const MainCraftSection = () => {
-    return (
+const MainCraftSection = ({ craft }) => {
+  const [selectedSubcategory, setSelectedSubcategory] = useState('');
+
+  const handleSubcategoryChange = (event) => {
+    setSelectedSubcategory(event.target.value);
+  };
+
+  const filteredCraft = selectedSubcategory
+    ? craft.filter((item) => item.subcategory_Name === selectedSubcategory)
+    : craft;
+
+  return (
+    <div>
+      <section>
         <div>
-<div className="navbar bg-base-100">
-  <div className="flex-1">
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="flex-none">
-    <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-        <div className="indicator">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span className="badge badge-sm indicator-item">8</span>
+          <h1 className='mx-auto flex flex-col justify-center items-center m-5 text-3xl font-bold'>
+            Painting and Drawing
+          </h1>
+          <fieldset className="space-y-1 text-gray-100 dark:text-gray-800 w-80 mx-auto">
+            <div className="flex">
+              <span className="flex items-center px-2 py-2 pointer-events-none sm:text-sm rounded-l-md bg-gray-700 dark:bg-gray-300">Sort By Subcategory:</span>
+              <select name="subcategory_Name" onChange={handleSubcategoryChange} className="pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600">
+                <option value="">All</option>
+                <option value="Landscape Painting">Landscape Painting</option>
+                <option value="Portrait Drawing">Portrait Drawing</option>
+                <option value="Watercolour Painting">Watercolour Painting</option>
+                <option value="Oil Painting">Oil Painting</option>
+                <option value="Charcoal Sketching">Charcoal Sketching</option>
+                <option value="Cartoon Drawing">Cartoon Drawing</option>
+              </select>
+            </div>
+          </fieldset>
         </div>
-      </div>
-      <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
-        <div className="card-body">
-          <span className="font-bold text-lg">8 Items</span>
-          <span className="text-info">Subtotal: $999</span>
-          <div className="card-actions">
-            <button className="btn btn-primary btn-block">View cart</button>
+        <div>
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-2 lg:p-10 p-2">
+            {filteredCraft.map((craft) => (
+              <div key={craft._id} data-aos="zoom-in">
+                <CraftItemsSection craft={craft} />
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
-    <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-        </div>
-    );
+  );
 };
 
 export default MainCraftSection;

@@ -1,5 +1,5 @@
 
-import { createBrowserRouter, useParams } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Root from "../mainLayout/Root";
@@ -20,9 +20,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
 
         children: [
+
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/homeCrafts')
+
             },
            
             {
@@ -59,8 +62,7 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/artCrafts/${params.id}`)
 
             },
-
-            
+          
 
 
             {

@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Slider from "../../components/Slider";
 import Sidebar from '../../components/Sidebar';
 import MainCraftSection from '../../components/MainCraftSection';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     useEffect(() => {
@@ -14,10 +15,13 @@ const Home = () => {
     }, []);
 
 
+const craft = useLoaderData()
+
+
     return (
         <div>
-            <Slider></Slider>
-            <Sidebar></Sidebar>
+            <Slider ></Slider>
+            <MainCraftSection key={craft._id} craft={craft}></MainCraftSection>
             <section>
                 <div className="mx-auto flex flex-col justify-center text-center px-5">
                     <h1 className="font-bold text-2xl py-5 text-white" >Explore the Premier Apartments and Experience Unmatched Luxury</h1>

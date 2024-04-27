@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import MySingleCraftCard from "../../components/MySingleCraftCard";
+import EmptyState from "../../components/EmptyState";
 
 const MyCraftList = () => {
     const { user } = useContext(AuthContext);
@@ -18,6 +19,16 @@ const MyCraftList = () => {
 
     console.log(filteredCrafts);
     const [crafts, setCrafts] = useState(filteredCrafts);
+
+    if (filteredCrafts.length < 1) {
+        return (
+          <EmptyState
+            message="No Craft Items Found"
+            address="/addCraftItem"
+            label="Add Craft"
+          />
+        );
+      }
 
 
     return (

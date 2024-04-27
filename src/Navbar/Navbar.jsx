@@ -7,7 +7,6 @@ const Navbar = () => {
 
 
     const { user, logOut } = useContext(AuthContext);
-
     const handleSignOut = () => {
         logOut()
             .then()
@@ -47,10 +46,10 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end pr-3">
                     {
-                        user ?
+                        user && user?
                             <div className="flex gap-4 items-center justify-center ">
                                 <Link to={"/updateProfile"} className="w-7 h-7 rounded-full tooltip" data-tip={user.displayName}>
-                                    <img alt="" className=" rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100" src={user.photoURL || "assets/images/icon.png"} />
+                                    <img alt="" className=" rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100" src={user.photoURL} />
                                 </Link>
                                 <div>
                                     <button onClick={handleSignOut} className=" px-5 py-2 rounded-full  bg-[#0632c3] hover:bg-[#57f0f0]  font-semibold hover:text-black ">Log Out</button>
@@ -62,6 +61,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
+            
 
         </div>
     );
