@@ -35,7 +35,7 @@ const Register = () => {
             }
 
             const result = await createUser(email, password);
-            await updateProfile(result.user, { displayName: name, photoURL: photo || "/assets/images/icon.png" });
+            await updateProfile(result.user, { displayName: name, photoURL: photo });
             setSuccess(true);
             await logOut();
             setTimeout(() => {
@@ -91,6 +91,7 @@ const Register = () => {
                             />
                             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                             <input
+                                required
                                 type="text"
                                 name="photo"
                                 placeholder="Photo Url"

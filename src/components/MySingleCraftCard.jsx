@@ -52,17 +52,17 @@ const MySingleCraftCard = ({ craft, crafts, setCrafts }) => {
     };
 
     return (
-        <div className="max-w-xs rounded-md shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
-            <img src={craft.image} alt="Image" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500 dark:bg-gray-500" />
-            <div className="flex flex-col justify-between p-6 space-y-8">
-                <div className="space-y-2">
-                    <h2 className="text-xl font-semibold tracking-wide">{craft.item_name}</h2>
-                    <p className="text-gray-100 dark:text-gray-800">{craft.short_description}</p>
-                    <p className='text-gray-100 dark:text-gray-800'>{craft.processing_time}</p>
-                    <p className='text-gray-100 dark:text-gray-800'>{craft.price}</p>
-                    <p className='text-gray-100 dark:text-gray-800'>{craft.stockStatus}</p>
+        <div className="min-w-xs rounded-md shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 w-72 m-auto justify-center items-center mb-5">
+            <img src={craft.image} alt="Image" className="object-cover object-center w-full rounded-t-md h-44 bg-gray-500 dark:bg-gray-500" />
+            <div className="flex flex-col justify-between p-6 ">
+                <div className="space-y-2 py-2">
+                    <h2 className="text-lg font-semibold tracking-wide">{craft.item_name.slice(0,21)}.</h2>
+                    <p className='text-gray-100 dark:text-gray-800 font-semibold'>Category : <span className='font-normal'>{craft.subcategory_Name}</span></p>
+                    <p className="text-gray-100 dark:text-gray-800 font-semibold">Price : <span className='font-normal'>{craft.price} TK</span></p>
+                    <p className='text-gray-100 dark:text-gray-800 font-semibold'>Processing Time: <span className='font-normal'>{craft.processing_time} Weeks</span></p>
+                    <p className='text-gray-100 dark:text-gray-800 font-semibold'>Status : <span className='font-normal'>{craft.stockStatus}</span></p>
                 </div>
-                <div className='flex gap-3'>
+                <div className='flex gap-3 mx-auto items-center'>
                     <Link to={`/updateCraftDetails/${craft._id}`}>
                         <button type="button" className="btn-sm flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50">
                             Update
@@ -71,7 +71,7 @@ const MySingleCraftCard = ({ craft, crafts, setCrafts }) => {
                     <button
                         onClick={() => handleDelete(craft._id)}
                         type="button"
-                        className={`btn-sm flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 ${isDeleting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        className={`btn-sm flex items-center justify-center  font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-red-600 text-gray-900 dark:text-gray-50 ${isDeleting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         disabled={isDeleting}
                     >
                         {isDeleting ? 'Deleting...' : 'Delete'}

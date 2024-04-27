@@ -39,26 +39,26 @@ const router = createBrowserRouter([
             },
             {
                 path: '/CraftCardDetails/:id',
-                element: <CraftCardDetails></CraftCardDetails>,
+                element: <PrivateRoute><CraftCardDetails></CraftCardDetails></PrivateRoute>,
                 loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
             },
 
 
             {
                 path: '/addCraftItem',
-                element: <AddCraftitem></AddCraftitem>
+                element: <PrivateRoute><AddCraftitem></AddCraftitem></PrivateRoute>
             },
 
 
             {
                 path: '/myCraftList',
-                element: <MyCraftList></MyCraftList>,
+                element: <PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>,
                 loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
 
             },
             {
                 path: '/updateCraftDetails/:id',
-                element: <UpdateCraftDetails></UpdateCraftDetails>,
+                element: <PrivateRoute><UpdateCraftDetails></UpdateCraftDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://art-craft-store-server-delta.vercel.app/artCrafts/${params.id}`)
 
             },

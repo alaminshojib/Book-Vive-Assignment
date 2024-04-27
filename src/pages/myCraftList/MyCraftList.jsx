@@ -32,7 +32,7 @@ const MyCraftList = () => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-3 mx-auto mt-5">
+        <div className="grid grid-cols-3 gap-3 mx-auto p-10">
             {/* Render filtered crafts */}
             {filteredCrafts.map(craft => (
 

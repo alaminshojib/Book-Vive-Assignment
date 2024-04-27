@@ -46,6 +46,7 @@ const Login = () => {
     const handleGithubSignIn = () => {
         signInWithGithub()
             .then(result => {
+                console.log(result)
                 setShowAlert(true);
                 setTimeout(() => {
                     setShowAlert(false);

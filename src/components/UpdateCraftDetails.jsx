@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const UpdateCraftDetails = () => {
+
+    const navigate = useNavigate();
+
     const { id } = useParams();
 
     const [formData, setFormData] = useState({
@@ -73,6 +76,8 @@ const UpdateCraftDetails = () => {
                     icon: 'success',
                     confirmButtonText: 'Done',
                 });
+                navigate('/myCraftList');
+
             }
         } catch (error) {
             console.error('Error updating craft:', error);
@@ -86,8 +91,8 @@ const UpdateCraftDetails = () => {
 
 
     return (
-        <div>
-            <h2 className="text-3xl font-semibold text-center py-5">Update Air & Craft Item</h2>
+        <div className='py-5'>
+            <h2 className="text-3xl font-semibold text-center p-5 dark:text-white">Update Craft Item :</h2>
             <form onSubmit={handleUpdateCraft}>
                 <div className='grid grid-cols-2 justify-center items-center  gap-5 w-2/3 mx-auto'>
                     <div>
@@ -113,13 +118,26 @@ const UpdateCraftDetails = () => {
                         <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
                             <div className="flex">
                                 <span className="flex items-center px-3 py-3 pointer-events-none sm:text-sm rounded-l-md bg-gray-700 dark:bg-gray-300">Subcategory Name:</span>
-                                <select name="subcategory_Name" value={formData.subcategory_Name} onChange={handleChange} required className=" pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600" >
-                                    <option>Landscape Painting</option>
-                                    <option>Portrait Drawing</option>
-                                    <option>Watercolour Painting</option>
-                                    <option>Oil Painting</option>
-                                    <option>Charcoal Sketching</option>
-                                    <option>Cartoon Drawing</option>
+                                <select
+                                    name="subcategory_Name"
+                                    value={formData.subcategory_Name}
+                                    onChange={handleChange}
+                                    required
+                                    className="pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600"
+                                >
+                                    <option disabled value="">Select Subcategory</option>
+                                    {[
+                                        "Landscape Painting",
+                                        "Portrait Drawing",
+                                        "Watercolour Painting",
+                                        "Oil Painting",
+                                        "Charcoal Sketching",
+                                        "Cartoon Drawing"
+                                    ].map((subcategory) => (
+                                        <option key={subcategory} value={subcategory}>
+                                            {subcategory}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                         </fieldset>
@@ -146,17 +164,37 @@ const UpdateCraftDetails = () => {
                         <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
                             <div className="flex">
                                 <span className="flex items-center px-3 py-3 pointer-events-none sm:text-sm rounded-l-md bg-gray-700 dark:bg-gray-300">Rating:</span>
-                                <input type="number" name="rating" value={formData.rating} onChange={handleChange} required id="url" placeholder="Rating" className=" pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600" />
+                                <input
+                                    type="number"
+                                    name="rating"
+                                    value={formData.rating}
+                                    onChange={handleChange}
+                                    required
+                                    id="url"
+                                    placeholder="Rating"
+                                    className="pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600"
+                                    min="0"
+                                    max="5"
+                                    step="0.1"
+                                />
                             </div>
                         </fieldset>
+
                     </div>
                     <div>
                         <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
                             <div className="flex">
                                 <span className="flex items-center px-3 py-3 pointer-events-none sm:text-sm rounded-l-md bg-gray-700 dark:bg-gray-300">Customization:</span>
-                                <select name="customization" value={formData.customization} onChange={handleChange} required className=" pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600" >
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
+                                <select
+                                    name="customization"
+                                    value={formData.customization}
+                                    onChange={handleChange}
+                                    required
+                                    className="pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600"
+                                >
+                                    <option disabled value="">Select Customization Option</option>
+                                    <option value="Yes">Yes </option>
+                                    <option value="No">No</option>
                                 </select>
                             </div>
                         </fieldset>
@@ -174,13 +212,19 @@ const UpdateCraftDetails = () => {
                         <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
                             <div className="flex">
                                 <span className="flex items-center px-3 py-3 pointer-events-none sm:text-sm rounded-l-md bg-gray-700 dark:bg-gray-300">Stock Status:</span>
-                                <select name="stockStatus" value={formData.stockStatus} onChange={handleChange} required className=" pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600" >
-                                    <option value="In stock">In Stock</option>
+                                <select
+                                    name="stockStatus"
+                                    value={formData.stockStatus}
+                                    onChange={handleChange}
+                                    required
+                                    className="pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600"
+                                >
+                                    <option disabled value="">Select Stock Status</option>
+                                    <option value="In Stock">In Stock</option>
                                     <option value="Made to Order">Made to Order</option>
                                 </select>
                             </div>
                         </fieldset>
-
                     </div>
                     <div>
                         <fieldset className="w-full space-y-1 text-gray-100 dark:text-gray-800">
@@ -204,7 +248,7 @@ const UpdateCraftDetails = () => {
                     </div>
 
                 </div>
-                <button className='items-center font-semibold btn px-10 mx-auto justify-center flex flex-col m-3 btn-primary' type="submit">Add</button>
+                <button className='btn-sm py-5 m-5 items-center font-semibold btn px-10 mx-auto justify-center flex flex-col btn-success text-white' type="submit">Update</button>
 
             </form>
         </div>

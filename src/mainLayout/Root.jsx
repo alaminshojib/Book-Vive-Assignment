@@ -3,14 +3,29 @@ import Footer from "../footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
 
-const Root = () => {
+// App.js
+import React, { useState } from 'react';
+import './Root.css'; // Assuming you have your global styles defined in App.css
+
+function Root() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkMode(prevMode => !prevMode);
+    };
+
     return (
-        <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>      
+        <div className={isDarkMode ? 'dark' : 'light' }>
+            
+            <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}></Navbar>
+            <div className="bg-[url(https://i.ibb.co/KxCznz0/wave-haikei.png)] bg-no-repeat bg-cover"><Outlet></Outlet></div>
+            <Footer></Footer>
         </div>
     );
-};
+}
+
+
+
+
 
 export default Root;
