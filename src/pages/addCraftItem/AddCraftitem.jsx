@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { Typewriter } from 'react-simple-typewriter';
 
 const AddCraftitem = () => {
     const { user } = useContext(AuthContext);
@@ -85,7 +86,15 @@ const AddCraftitem = () => {
     return (
         <div>
             <div className='pb-5'>
-                <h2 className='lg:text-3xl text-xl font-semibold text-center py-5'>Add Craft Item :</h2>
+                <h2 className='lg:text-3xl text-xl font-semibold text-center py-5'><Typewriter
+        words={['Add Craft Item :']} 
+        loop={0} 
+        typeSpeed={100} 
+        deleteSpeed={0} 
+        delaySpeed={0} 
+        cursor={null} // Disable cursor for smoother typing effect
+        typeWriterSpan={props => <span {...props} className="inline-block"/>} // Wrap each letter in a span for styling
+    /></h2>
 
 
                 <form onSubmit={handleSubmit}>

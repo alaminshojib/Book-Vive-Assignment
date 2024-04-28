@@ -47,7 +47,7 @@ const Footer = () => {
 				<h3 className="uppercase  ">Developers</h3>
 				<ul className="space-y-1">
 					<li>
-						<a rel="noopener noreferrer" href="#">Public API</a>
+						<a rel="noopener noreferrer" href="#">Public Reviews</a>
 					</li>
 					<li>
 						<a rel="noopener noreferrer" href="#">Documentation</a>

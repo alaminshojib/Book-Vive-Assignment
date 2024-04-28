@@ -6,29 +6,25 @@ const CraftItemsSection = ({ craft }) => {
     image,
     item_name,
     subcategory_Name,
-    short_description,
     price,
     rating,
-    customization,
     processing_time,
     stockStatus,
-    userEmail,
-    userName,
   } = craft;
 
   return (
-    <div className="drop-shadow-xl">
-      <article className="flex flex-col border-3 rounded-3xl shadow-md">
+    <div className="drop-shadow-xl ">
+      <article className="flex flex-col border-3 rounded-3xl shadow-md w-72 h-96 justify-center mx-auto">
         <div>
           <img
             alt=""
-            className="object-cover lg:h-56 h-44 mx-auto w-full rounded-t-3xl bg-cover"
+            className="object-cover h-44 mx-auto w-full rounded-t-3xl bg-cover"
             src={image}
           />
         </div>
 
-        <div className="flex flex-col flex-1 px-4 py-3">
-          <div className="flex flex-wrap justify-between pt-3 space-x-2 text-lg font-semibold">
+        <div className="flex flex-col flex-1 px-4 py-1">
+          <div className="flex flex-wrap justify-between pt-3 space-x-2 text-lg font-medium">
             <span>Price : {price} TK</span>
 
             <Link
@@ -38,7 +34,7 @@ const CraftItemsSection = ({ craft }) => {
               View Details
             </Link>
           </div>
-          <h3 className="flex-1 py-2 lg:text-xl text-md leading-snug font-bold">
+          <h3 className=" py-2 lg:text-lg text-md  font-semibold">
             {item_name.slice(0, 30)}
           </h3>
           <h4 className='mb-1 font-semibold text-md'> Category : <span className='font-normal'>{subcategory_Name} </span></h4>

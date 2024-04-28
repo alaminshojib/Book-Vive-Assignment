@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CraftItemsSection from './CraftItemsSection';
+import { Typewriter } from 'react-simple-typewriter';
 
 const MainCraftSection = ({ craft }) => {
   const [selectedSubcategory, setSelectedSubcategory] = useState('');
@@ -14,15 +15,26 @@ const MainCraftSection = ({ craft }) => {
 
   return (
     <div>
-      <section className='md:py-10 py-5'>
+      <section >
         <div>
-          <h1 className='mx-auto flex flex-col justify-center items-center m-5 md:text-3xl text-2xl font-bold  w-fit rounded-lg p-1 '>
-            Painting and Drawing
+        <h1 className='mx-auto flex flex-col justify-center items-center m-5 md:text-3xl text-2xl font-medium  w-fit rounded-lg p-1 '>
+        
+            <Typewriter
+        words={['Some Best Painting and Drawing']} 
+        loop={0} 
+        typeSpeed={100} 
+        deleteSpeed={0} 
+        delaySpeed={0} 
+        cursor={null} // Disable cursor for smoother typing effect
+        typeWriterSpan={props => <span {...props} className="inline-block"/>} // Wrap each letter in a span for styling
+    />
+
           </h1>
-          <fieldset className="space-y-1 text-gray-100 dark:text-gray-800 w-80 mx-auto">
+          <fieldset className="space-y-1 text-gray-100 dark:text-gray-800 w-fit mx-auto">
             <div className="flex">
-              <span className="flex items-center px-2 py-2 pointer-events-none sm:text-sm rounded-l-md bg-gray-700 dark:bg-gray-300">Sort By Subcategory:</span>
+              <span className="flex items-center px-2 py-2 pointer-events-none text-xs rounded-l-md bg-gray-700 dark:bg-gray-300">Filter By Subcategory:</span>
               <select name="subcategory_Name" onChange={handleSubcategoryChange} className="pl-2 flex flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-700 dark:border-gray-300 text-gray-100 dark:text-gray-800 bg-gray-800 dark:bg-gray-100 focus:ring-violet-400 focus:dark:ring-violet-600">
+                <option disabled value="">Select Subcategory</option>
                 <option value="">All</option>
                 <option value="Landscape Painting">Landscape Painting</option>
                 <option value="Portrait Drawing">Portrait Drawing</option>

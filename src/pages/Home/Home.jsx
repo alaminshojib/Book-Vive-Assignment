@@ -4,6 +4,9 @@ import 'aos/dist/aos.css';
 import Slider from "../../components/Slider";
 import MainCraftSection from '../../components/MainCraftSection';
 import { useLoaderData } from 'react-router-dom';
+import ScrollableCard from '../../components/ScrollableCard';
+import { Typewriter } from 'react-simple-typewriter'
+
 
 const Home = () => {
     useEffect(() => {
@@ -12,32 +15,141 @@ const Home = () => {
             once: true,
         });
     }, []);
-
     const craft = useLoaderData();
+
+
+
 
     return (
         <div>
             <Slider key={craft._id} craft={craft} />
+            <ScrollableCard ></ScrollableCard>
             <MainCraftSection key={craft._id} craft={craft} />
-            <section className="px-4 lg:px-0">
-                <div className="mx-auto flex flex-col justify-center text-center py-8">
-                    <h1 className="font-bold text-2xl ">Explore bou the Premier Apartments and Experience Unmatched Luxury</h1>
-                    <p className="max-w-lg mx-auto ">Immerse yourself in the realm of luxury living with our exceptional listings featuring a diverse selection of opulent apartments and exquisite villas. Uncover the perfect home that reflects your unique taste and lifestyle, whether it’s a chic apartment or a lavish villa.</p>
+            <section className="mx-auto lg:px-0 ">
+                <div className="lg:mx-20 mx-5 px-3 flex flex-col justify-center py-8 shadow-md border-2">
+                    <section className="py-6">
+                        <div data-aos="fade-up" className="grid max-w-6xl grid-cols-1 mx-auto lg:px-8 md:grid-cols-2 md:divide-x-2">
+                            <div className="">
+                                <h1 className="text-3xl font-bold">
+                                    <Typewriter
+                                        words={['Get in touch']}
+                                        loop={0}
+                                        typeSpeed={100}
+                                        deleteSpeed={50}
+                                        delaySpeed={2000}
+                                    />
+                                </h1>
+                                <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
+                                <div className="space-y-4">
+                                    <p className="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
+                                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
+                                        </svg>
+                                        <span>Ishwardi, Pabna , 6620 Rajshahi, Bangladesh</span>
+                                    </p>
+                                    <p className="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                        </svg>
+                                        <span>+880123456789</span>
+                                    </p>
+                                    <p className="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                        </svg>
+                                        <span>contact@business.com</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <form data-aos="fade-up" noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                                <label className="block">
+                                    <span className="mb-1">Full name</span>
+                                    <input type="text" placeholder="Leroy Jenkins" className="p-1 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 " />
+                                </label>
+                                <label className="block">
+                                    <span className="mb-1">Email address</span>
+                                    <input type="email" placeholder="leroy@jenkins.com" className="p-1 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 " />
+                                </label>
+                                <label className="block">
+                                    <span className="mb-1">Message</span>
+                                    <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 "></textarea>
+                                </label>
+                                <button type="button" className="btn-md self-center px-8  text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 dark:bg-violet-600  focus:ring-violet-400 focus:dark:ring-violet-600 hover:ring-violet-400 hover:dark:ring-violet-600">Submit</button>
+                            </form>
+                        </div>
+                    </section>
+
                 </div>
             </section>
 
             <section className="py-6 ">
                 <div className="container p-4 mx-auto space-y-16 sm:p-10">
                     <div className="space-y-4 text-center">
-                        <h3 className="text-2xl font-bold leading-none sm:text-5xl">Meet our team</h3>
+                        <h3 className="text-2xl font-bold leading-none sm:text-5xl"> <Typewriter
+                                        words={['Meet our team']}
+                                        loop={0}
+                                        typeSpeed={100}
+                                        deleteSpeed={50}
+                                        delaySpeed={2000}
+                                    /></h3>
                         <p className="md:max-w-2xl max-w-lg px-5 text-center mx-auto">
-Our team blends diverse talents and perspectives to produce cutting-edge results, surpassing boundaries and shaping the future of your industry field.</p>
+                            Our team blends diverse talents and perspectives to produce cutting-edge results, surpassing boundaries and shaping the future of your industry field.</p>
                     </div>
                     <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://source.unsplash.com/240x320/?portrait?0" />
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/xq1b5T9/download-2.jpg" />
                             <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
+                                <h4 className="text-xl font-semibold">Warika Limani</h4>
+                                <p className="text-sm ">Junior Artist</p>
+                                <div className="flex mt-2 space-x-2">
+                                    <a rel="noopener noreferrer" href="#" title="Twitter" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" className="w-4 h-4">
+                                            <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a rel="noopener noreferrer" href="#" title="LinkedIn" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
+                                            <path d="M8.268 28h-5.805v-18.694h5.805zM5.362 6.756c-1.856 0-3.362-1.538-3.362-3.394s1.505-3.362 3.362-3.362 3.362 1.505 3.362 3.362c0 1.856-1.506 3.394-3.362 3.394zM29.994 28h-5.792v-9.1c0-2.169-0.044-4.95-3.018-4.95-3.018 0-3.481 2.356-3.481 4.794v9.256h-5.799v-18.694h5.567v2.55h0.081c0.775-1.469 2.668-3.019 5.492-3.019 5.875 0 6.955 3.869 6.955 8.894v10.269z"></path>
+                                        </svg>
+                                    </a>
+                                    <a rel="noopener noreferrer" href="#" title="GitHub" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
+                                            <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/kKGtDKk/photo-1467307983825-619715426c70.jpg
+" />
+                            <div className="flex flex-col items-center">
+                                <h4 className="text-xl font-semibold">Fery Tomas</h4>
+                                <p className="text-sm ">Junio Artist</p>
+                                <div className="flex mt-2 space-x-2">
+                                    <a rel="noopener noreferrer" href="#" title="Twitter" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" className="w-4 h-4">
+                                            <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a rel="noopener noreferrer" href="#" title="LinkedIn" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
+                                            <path d="M8.268 28h-5.805v-18.694h5.805zM5.362 6.756c-1.856 0-3.362-1.538-3.362-3.394s1.505-3.362 3.362-3.362 3.362 1.505 3.362 3.362c0 1.856-1.506 3.394-3.362 3.394zM29.994 28h-5.792v-9.1c0-2.169-0.044-4.95-3.018-4.95-3.018 0-3.481 2.356-3.481 4.794v9.256h-5.799v-18.694h5.567v2.55h0.081c0.775-1.469 2.668-3.019 5.492-3.019 5.875 0 6.955 3.869 6.955 8.894v10.269z"></path>
+                                        </svg>
+                                    </a>
+                                    <a rel="noopener noreferrer" href="#" title="GitHub" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
+                                            <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/2v8Rq9v/handsome-bearded-guy-posing-against-white-wall-273609-20597.jpg" />
+                            <div className="flex flex-col items-center">
+                                <h4 className="text-xl font-semibold">Sapin Rakino</h4>
                                 <p className="text-sm ">Senior Artist</p>
                                 <div className="flex mt-2 space-x-2">
                                     <a rel="noopener noreferrer" href="#" title="Twitter" >
@@ -58,10 +170,10 @@ Our team blends diverse talents and perspectives to produce cutting-edge results
                                 </div>
                             </div>
                         </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://source.unsplash.com/240x320/?portrait?1" />
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/wsfDXBr/photo-1497881807663-38b9a95b7192-1.jpg" />
                             <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
+                                <h4 className="text-xl font-semibold">Feseroia Jenkin</h4>
                                 <p className="text-sm ">Senior Artist</p>
                                 <div className="flex mt-2 space-x-2">
                                     <a rel="noopener noreferrer" href="#" title="Twitter" >
@@ -82,58 +194,10 @@ Our team blends diverse talents and perspectives to produce cutting-edge results
                                 </div>
                             </div>
                         </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://source.unsplash.com/240x320/?portrait?2" />
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/wBWJHRP/photo-1551843073-4a9a5b6fcd5f-2.jpg" />
                             <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                                <p className="text-sm ">Senior Artist</p>
-                                <div className="flex mt-2 space-x-2">
-                                    <a rel="noopener noreferrer" href="#" title="Twitter" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" className="w-4 h-4">
-                                            <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
-                                        </svg>
-                                    </a>
-                                    <a rel="noopener noreferrer" href="#" title="LinkedIn" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
-                                            <path d="M8.268 28h-5.805v-18.694h5.805zM5.362 6.756c-1.856 0-3.362-1.538-3.362-3.394s1.505-3.362 3.362-3.362 3.362 1.505 3.362 3.362c0 1.856-1.506 3.394-3.362 3.394zM29.994 28h-5.792v-9.1c0-2.169-0.044-4.95-3.018-4.95-3.018 0-3.481 2.356-3.481 4.794v9.256h-5.799v-18.694h5.567v2.55h0.081c0.775-1.469 2.668-3.019 5.492-3.019 5.875 0 6.955 3.869 6.955 8.894v10.269z"></path>
-                                        </svg>
-                                    </a>
-                                    <a rel="noopener noreferrer" href="#" title="GitHub" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
-                                            <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://source.unsplash.com/240x320/?portrait?3" />
-                            <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                                <p className="text-sm ">Senior Artist</p>
-                                <div className="flex mt-2 space-x-2">
-                                    <a rel="noopener noreferrer" href="#" title="Twitter" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" className="w-4 h-4">
-                                            <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
-                                        </svg>
-                                    </a>
-                                    <a rel="noopener noreferrer" href="#" title="LinkedIn" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
-                                            <path d="M8.268 28h-5.805v-18.694h5.805zM5.362 6.756c-1.856 0-3.362-1.538-3.362-3.394s1.505-3.362 3.362-3.362 3.362 1.505 3.362 3.362c0 1.856-1.506 3.394-3.362 3.394zM29.994 28h-5.792v-9.1c0-2.169-0.044-4.95-3.018-4.95-3.018 0-3.481 2.356-3.481 4.794v9.256h-5.799v-18.694h5.567v2.55h0.081c0.775-1.469 2.668-3.019 5.492-3.019 5.875 0 6.955 3.869 6.955 8.894v10.269z"></path>
-                                        </svg>
-                                    </a>
-                                    <a rel="noopener noreferrer" href="#" title="GitHub" >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-4 h-4">
-                                            <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://source.unsplash.com/240x320/?portrait?4" />
-                            <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
+                                <h4 className="text-xl font-semibold">Sonera Teriam</h4>
                                 <p className="text-sm ">Senior Artist</p>
                                 <div className="flex mt-2 space-x-2">
                                     <a rel="noopener noreferrer" href="#" title="Twitter" className="">
@@ -154,10 +218,10 @@ Our team blends diverse talents and perspectives to produce cutting-edge results
                                 </div>
                             </div>
                         </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://source.unsplash.com/240x320/?portrait?5" />
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/NjzLS5b/download-3.jpg"/>
                             <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
+                                <h4 className="text-xl font-semibold">Ragry Jenki</h4>
                                 <p className="text-sm ">Senior Artist</p>
                                 <div className="flex mt-2 space-x-2">
                                     <a rel="noopener noreferrer" href="#" title="Twitter" className="">
@@ -178,10 +242,10 @@ Our team blends diverse talents and perspectives to produce cutting-edge results
                                 </div>
                             </div>
                         </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://source.unsplash.com/240x320/?portrait?6" />
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/LPcM0Nj/download-1.jpg" />
                             <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
+                                <h4 className="text-xl font-semibold">Leroy Rajon</h4>
                                 <p className="text-sm ">Senior Artist</p>
                                 <div className="flex mt-2 space-x-2">
                                     <a rel="noopener noreferrer" href="#" title="Twitter" className="">
@@ -202,10 +266,10 @@ Our team blends diverse talents and perspectives to produce cutting-edge results
                                 </div>
                             </div>
                         </div>
-                        <div className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://source.unsplash.com/240x320/?portrait?7" />
+                        <div data-aos="fade-up"  className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/JR0HD7R/360-F-282720917-7-Zt-Af-Eq-Ef-A6-CRT66im-V9av-GWXEg9w6-Jt.jpg" />
                             <div className="flex flex-col items-center">
-                                <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
+                                <h4 className="text-xl font-semibold"> Jenkins Trudo</h4>
                                 <p className="text-sm ">Senior Artist</p>
                                 <div className="flex mt-2 space-x-2">
                                     <a rel="noopener noreferrer" href="#" title="Twitter" >
