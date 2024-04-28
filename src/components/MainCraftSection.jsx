@@ -35,7 +35,7 @@ const MainCraftSection = ({ craft }) => {
           </fieldset>
         </div>
         <div>
-          <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-3 lg:p-12 p-10">
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-3 lg:p-12 p-5">
             {filteredCraft.map((craft) => (
               <div key={craft._id} data-aos="zoom-in">
                 <CraftItemsSection craft={craft} />
@@ -43,6 +43,9 @@ const MainCraftSection = ({ craft }) => {
             ))}
           </div>
         </div>
+
+
+
       </section>
     </div>
   );

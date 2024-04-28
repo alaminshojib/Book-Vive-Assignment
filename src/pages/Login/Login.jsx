@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
@@ -69,7 +70,7 @@ const Login = () => {
     return (
         <div>
             <section>
-                <div className="shadow-lg  rounded-2xl flex items-center p-5 mx-auto ">
+                <div className="shadow-lg  rounded-2xl flex items-center md:p-5 mx-auto ">
                     <div className="px-4 py-2 mx-auto justify-center items-center border rounded-xl bg-gray-300">
                         <h2 className="font-bold text-3xl text-[#002D74] text-center">Login</h2>
                         <p className="text-sm mt-4 text-[#002D74] text-center">If you already a member, easily log in now.</p>
@@ -90,16 +91,11 @@ const Login = () => {
 
                         {/* Success Alert */}
                         {showAlert && (
-                            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-                                <strong className="font-bold">Success!</strong>
-                                <span className="block sm:inline"> You have successfully logged in.</span>
-                                <span className="absolute top-0 bottom-0 right-0 px-4 py-3" onClick={() => setShowAlert(false)}>
-                                    <svg className="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <title>Close</title>
-                                        <path fillRule="evenodd" d="M14.354 5.354a2 2 0 0 0-2.828 0L10 7.172 7.172 4.354a2 2 0 1 0-2.828 2.828L7.172 10l-2.828 2.828a2 2 0 1 0 2.828 2.828L10 12.828l2.828 2.828a2 2 0 1 0 2.828-2.828L12.828 10l2.828-2.828a2 2 0 0 0 0-2.828z"/>
-                                    </svg>
-                                </span>
-                            </div>
+                            Swal.fire({
+                                title: "Success!",
+                                text: "Successfully Logged In!",
+                                icon: "success"
+                              })
                         )}
 
                         <form onSubmit={handleSubmit(handleLogin)} className="flex flex-col gap-4">
@@ -129,7 +125,7 @@ const Login = () => {
                                     )}
                                 </span>
                             </div>
-                            <div className="px-2 justify-start mx-0 text-sm border-gray-500">Forget password?</div>
+                            <div className="px-2 justify-start mx-0 text-sm ">Forget password?</div>
                             <button className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" type="submit">Login</button>
                         </form>
 
@@ -138,7 +134,7 @@ const Login = () => {
                             <p className="text-center text-black text-sm">OR</p>
                             <hr className="border-gray-600" />
                         </div>
-                        <button onClick={handleGoogleSignIn} className="bg-white border py-2 w-fit px-3 mx-auto rounded-xl mt-3 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+                        <button onClick={handleGoogleSignIn} className=" text-[#002D74] border-2 py-2 w-fit px-3 mx-auto rounded-xl mt-3 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
                             <svg className="mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="25px">
                                 <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
                                 <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
@@ -148,7 +144,7 @@ const Login = () => {
 
                             Login with Google
                         </button>
-                        <button onClick={handleGithubSignIn} className="bg-white border py-2 w-fit px-3 mx-auto rounded-xl mt-2 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+                        <button onClick={handleGithubSignIn} className=" text-[#002D74] border-2 py-2 w-fit px-3 mx-auto rounded-xl mt-2 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
                             <span className=" text-xl mr-3"><FaGithub />
                             </span>
 

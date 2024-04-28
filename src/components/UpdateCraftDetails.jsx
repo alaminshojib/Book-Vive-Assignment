@@ -93,7 +93,7 @@ const UpdateCraftDetails = () => {
 
     return (
         <div className='py-5'>
-            <h2 className="text-3xl font-semibold text-center p-5 dark:text-white">Update Craft Item :</h2>
+            <h2 className="lg:text-3xl text-xl font-semibold text-center p-5 ">Update Art & Craft Item :</h2>
             <form onSubmit={handleUpdateCraft}>
                 <div className='grid lg:grid-cols-2 grid-cols-1 justify-center items-center  gap-5 md:w-2/3 w-11/12 mx-auto'>
                     <div>

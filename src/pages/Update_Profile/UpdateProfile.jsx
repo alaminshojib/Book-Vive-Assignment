@@ -58,8 +58,8 @@ const handleBack = () => {
 	return (
 		<div className=" mx-3">
 
-<div className='sm:max-w-md  py-4 lg:py-5 flex-col sm:space-x-6 relative  md:min-h-72 mx-auto bg-white my-5 lg:my-8 rounded-3xl flex items-center justify-center border'>
-				<Link onClick={() => document.getElementById('my_modal_5').showModal()} className="absolute top-0 right-0 rounded-full bg-gray-50 p-3 flex items-center gap-1 m-3"><FaEdit />Edit</Link>
+<div className='sm:max-w-md  py-4 lg:py-5 flex-col sm:space-x-6 relative  md:min-h-72 mx-auto border-2 my-5 lg:my-8 rounded-3xl flex items-center justify-center shadow-md'>
+				<Link onClick={() => document.getElementById('my_modal_5').showModal()} className="absolute top-0 right-0 rounded-full border-2 px-3 py-1 flex items-center gap-1 m-3"><FaEdit />Edit</Link>
 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-96  xl:w-64 dark:bg-gray-800 dark:text-gray-100">
 	
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={user.photoURL} />

@@ -52,15 +52,15 @@ const MySingleCraftCard = ({ craft, crafts, setCrafts }) => {
     };
 
     return (
-        <div className="min-w-xs rounded-md shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 w-72 m-auto justify-center items-center mb-5">
+        <div className="min-w-xs rounded-xl shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800 w-72 m-auto justify-center items-center mb-5">
             <img src={craft.image} alt="Image" className="object-cover object-center w-full rounded-t-md h-44 bg-gray-500 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 ">
-                <div className="space-y-2 py-2">
+                <div className="space-y-2 ">
                     <h2 className="text-lg font-semibold tracking-wide">{craft.item_name.slice(0,21)}.</h2>
                     <p className='text-gray-100 dark:text-gray-800 font-semibold'>Category : <span className='font-normal'>{craft.subcategory_Name}</span></p>
                     <p className="text-gray-100 dark:text-gray-800 font-semibold">Price : <span className='font-normal'>{craft.price} TK</span></p>
-                    <p className='text-gray-100 dark:text-gray-800 font-semibold'>Processing Time: <span className='font-normal'>{craft.processing_time} Weeks</span></p>
-                    <p className='text-gray-100 dark:text-gray-800 font-semibold'>Status : <span className='font-normal'>{craft.stockStatus}</span></p>
+                    <p className='text-gray-100 dark:text-gray-800 font-semibold'>Customization : <span className='font-normal'>{craft.customization}</span></p>
+                    <p className='text-gray-100 dark:text-gray-800 font-semibold pb-2'>Status : <span className='font-normal'>{craft.stockStatus}</span></p>
                 </div>
                 <div className='flex gap-3 mx-auto items-center'>
                     <Link to={`/updateCraftDetails/${craft._id}`}>

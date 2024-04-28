@@ -72,8 +72,8 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                                 </div>
                             </div>
                             :
-                            <div className="space-x-2"><NavLink className={'px-5 py-3 rounded-full bg-cyan-500 font-medium'} to="/register" >Register</NavLink>
-                                <NavLink className={'px-5 py-3 rounded-full bg-green-500 font-medium'} to="/login" >Login</NavLink></div>
+                            <div className="space-x-2"><NavLink className={'px-5 py-3 font-semibold rounded-full bg-cyan-500 '} to="/register" >Register</NavLink>
+                                <NavLink className={'px-5 py-3 rounded-full bg-green-500 font-semibold'} to="/login" >Login</NavLink></div>
                     }
                 </div>
             </div>

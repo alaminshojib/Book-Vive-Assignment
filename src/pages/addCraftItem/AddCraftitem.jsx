@@ -85,7 +85,7 @@ const AddCraftitem = () => {
     return (
         <div>
             <div className='pb-5'>
-                <h2 className='text-3xl font-semibold text-center dark:text-white py-5'>Add Craft Item :</h2>
+                <h2 className='lg:text-3xl text-xl font-semibold text-center py-5'>Add Craft Item :</h2>
 
 
                 <form onSubmit={handleSubmit}>
@@ -192,7 +192,7 @@ const AddCraftitem = () => {
                                         <option value="Yes">Yes </option>
                                         <option value="No">No</option>
                                     </select>
-                                </div>
+                                    </div>
                             </fieldset>
 
 
