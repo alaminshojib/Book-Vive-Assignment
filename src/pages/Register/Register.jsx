@@ -3,6 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const { createUser, logOut } = useContext(AuthContext);
@@ -23,30 +24,36 @@ const Register = () => {
         try {
             setError('');
             setLoading(true);
-
+    
             if (password !== confirmPassword) {
                 throw new Error('Passwords do not match');
             }
-
+    
             const regexUpperCase = /[A-Z]/;
             const regexLowerCase = /[a-z]/;
             if (!regexUpperCase.test(password) || !regexLowerCase.test(password) || password.length < 6) {
                 throw new Error('Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.');
             }
-
+    
             const result = await createUser(email, password);
             await updateProfile(result.user, { displayName: name, photoURL: photo });
-            setSuccess(true);
             await logOut();
+    
+            setSuccess(true);
             setTimeout(() => {
                 navigate('/login')
             }, 1500);
         } catch (error) {
-            setError(error.message);
+            if (error.code === 'auth/email-already-in-use') {
+                setError('This email is already registered. Please use a different email address.');
+            } else {
+                setError(error.message);
+            }
         } finally {
             setLoading(false);
         }
     });
+    
 
     return (
         <div>
@@ -56,16 +63,13 @@ const Register = () => {
                 </div>
             )}
             {success && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-                    <strong className="font-bold">Success!</strong>
-                    <span className="block sm:inline"> Registration completed successfully.</span>
-                    <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
-                        <svg onClick={() => setSuccess(false)} className="fill-current h-6 w-6 text-green-500 cursor-pointer" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <title>Close</title>
-                            <path fillRule="evenodd" d="M14.348 14.849a1 1 0 1 1-1.697 1.102l-3.651-3.889-3.652 3.89a1 1 0 1 1-1.697-1.102l3.9-4.161L4.051 5.65a1 1 0 1 1 1.697-1.102l3.652 3.889 3.651-3.889a1 1 0 1 1 1.697 1.102l-3.899 4.161 3.899 4.16z" clipRule="evenodd" />
-                        </svg>
-                    </span>
-                </div>
+               Swal.fire({
+                title: "Success!",
+                text: "Registration completed successfully!",
+                icon: "success"
+              })
+               
+
             )}
             <section>
                 <div className="shadow-lg my-5 rounded-2xl flex items-center p-3 mx-auto">

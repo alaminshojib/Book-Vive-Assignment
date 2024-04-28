@@ -18,17 +18,17 @@ const CraftItemsSection = ({ craft }) => {
 
   return (
     <div className="drop-shadow-xl">
-      <article className="flex flex-col bg-white rounded-3xl">
+      <article className="flex flex-col border-3 rounded-3xl shadow-md">
         <div>
           <img
             alt=""
-            className="object-cover lg:h-56 mx-auto w-full rounded-t-3xl bg-cover"
+            className="object-cover lg:h-56 h-44 mx-auto w-full rounded-t-3xl bg-cover"
             src={image}
           />
         </div>
 
         <div className="flex flex-col flex-1 px-4 py-3">
-          <div className="flex flex-wrap justify-between pt-3 space-x-2 text-lg dark:text-gray-600 font-semibold">
+          <div className="flex flex-wrap justify-between pt-3 space-x-2 text-lg font-semibold">
             <span>Price : {price} TK</span>
 
             <Link
