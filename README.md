@@ -9,7 +9,9 @@ Live Site Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Website](https://art-craft-store-cli
 
 Server Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Server](https://art-craft-store-server-delta.vercel.app)
 
-Repository Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Repository](https://github.com/programming-hero-web-course-4/b9a10-server-side-alaminshojib)
+Client GitHub Repository Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Repository](https://github.com/programming-hero-web-course-4/B9A10-client-side-alaminshojib)
+
+Server GitHub Repository Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Repository](https://github.com/programming-hero-web-course-4/b9a10-server-side-alaminshojib)
 
 ## Features
 
