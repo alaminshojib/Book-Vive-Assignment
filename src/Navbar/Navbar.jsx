@@ -37,12 +37,12 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                         'Your craft item has been deleted.',
                         'success'
                     );
-                 
+
                 }
             }
         } catch (error) {
             console.error('Error deleting craft item:', error);
-            
+
         } finally {
             window.location.reload()
         }
@@ -50,10 +50,10 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
 
     const navLinks = <>
-        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/">Home</NavLink>
-        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/allCraftItems">All Art & craft Items</NavLink>
-        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/addCraftItem">Add Craft Item</NavLink>
-        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/myCraftList">My Art & Craft List</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full font-medium'} to="/">Home</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full font-medium'} to="/allCraftItems">All Art & craft Items</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full font-medium'} to="/addCraftItem">Add Craft Item</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full font-medium'} to="/myCraftList">My Art & Craft List</NavLink>
 
     </>
     return (
@@ -65,8 +65,10 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
                         <div tabIndex={0} className="flex menu menu-sm dropdown-content mt-3 z-[3] p-2 shadow bg-slate-200  rounded-box w-52 ">
-
-                            {navLinks}
+                            <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/">Home</NavLink>
+                            <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/allCraftItems">All Art & craft Items</NavLink>
+                            <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/addCraftItem">Add Craft Item</NavLink>
+                            <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/myCraftList">My Art & Craft List</NavLink>
                             <Link onClick={handleSignOut} className=" px-4 py-2 rounded-full  font-medium text-gray-900">Log Out</Link>
 
 
