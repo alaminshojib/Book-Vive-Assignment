@@ -3,21 +3,57 @@ import { useContext } from "react";
 import './NavStyle.css'
 import { AuthContext } from "../providers/AuthProvider";
 import { FiSun, FiMoon } from 'react-icons/fi';
+import Swal from "sweetalert2";
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
 
 
     const { user, logOut } = useContext(AuthContext);
-    const handleSignOut = () => {
-        logOut()
-            .then()
-            .catch()
-    }
+
+    const handleSignOut = async () => {
+        try {
+            const result = await Swal.fire({
+                title: 'Are you sure?',
+                text: "To gain full access, you need to log in again!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Log Out!'
+            });
+
+            if (result.isConfirmed) {
+                logOut()
+
+
+                if (!response.ok) {
+                    throw new Error('Failed to delete craft item');
+                }
+
+                const data = await response.json();
+                if (data.deletedCount > 0) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your craft item has been deleted.',
+                        'success'
+                    );
+                 
+                }
+            }
+        } catch (error) {
+            console.error('Error deleting craft item:', error);
+            
+        } finally {
+            window.location.reload()
+        }
+    };
+
+
     const navLinks = <>
-        <NavLink className={'px-4 py-2 rounded-full  font-medium'} to="/">Home</NavLink>
-        <NavLink className={'px-4 py-2 rounded-full  font-medium'} to="/allCraftItems">All Art & craft Items</NavLink>
-        <NavLink className={'px-4 py-2 rounded-full  font-medium'} to="/addCraftItem">Add Craft Item</NavLink>
-        <NavLink className={'px-4 py-2 rounded-full  font-medium'} to="/myCraftList">My Art & Craft List</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/">Home</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/allCraftItems">All Art & craft Items</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/addCraftItem">Add Craft Item</NavLink>
+        <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/myCraftList">My Art & Craft List</NavLink>
 
     </>
     return (
@@ -31,6 +67,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                         <div tabIndex={0} className="flex menu menu-sm dropdown-content mt-3 z-[3] p-2 shadow bg-slate-200  rounded-box w-52 ">
 
                             {navLinks}
+                            <Link onClick={handleSignOut} className=" px-4 py-2 rounded-full  font-medium text-gray-900">Log Out</Link>
 
 
 
@@ -62,13 +99,13 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
                     {
                         user && user ?
-                            <div className="flex gap-4 items-center justify-center ">
+                            <div className="flex gap-4 items-center justify-center">
 
                                 <Link to={"/updateProfile"} className="w-7 h-7 rounded-full tooltip" data-tip={user.displayName}>
                                     <img alt="" className=" rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100" src={user.photoURL} />
                                 </Link>
                                 <div>
-                                    <button onClick={handleSignOut} className=" text-white px-5 py-2 rounded-full  bg-[#0632c3] hover:bg-[#57f0f0]  font-semibold hover:text-black ">Log Out</button>
+                                    <button onClick={handleSignOut} className="hidden md:block text-white px-5 py-2 rounded-full  bg-[#0632c3] hover:bg-[#57f0f0]  font-semibold hover:text-black ">Log Out</button>
                                 </div>
                             </div>
                             :
