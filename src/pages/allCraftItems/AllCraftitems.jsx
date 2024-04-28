@@ -49,7 +49,7 @@ const AllCraftitems = () => {
                         </div>
                     </fieldset>
                 </div>
-                <div className="overflow-x-auto mt-2 rounded-xl md:px-10 p-5 h-screen">
+                <div className="overflow-x-auto mt-2 rounded-xl md:px-10 p-5 h-96 lg:h-screen">
                     <table className="min-w-full text-xs border-2">
                         <colgroup>
                             <col />

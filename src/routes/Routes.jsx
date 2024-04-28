@@ -1,46 +1,86 @@
 import { createBrowserRouter } from "react-router-dom";
-import React from "react";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 import Root from "../mainLayout/Root";
-import PrivateRoute from "./PrivateRoute";
-import ErrorPage from "../components/ErrorPage";
 import Home from "../pages/Home/Home";
 import UpdateProfile from "../pages/Update_Profile/UpdateProfile";
+import ErrorPage from "../components/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 import AllCraftitems from "../pages/allCraftItems/AllCraftitems";
 import MyCraftList from "../pages/myCraftList/MyCraftList";
 import AddCraftitem from "../pages/addCraftItem/AddCraftitem";
 import CraftCardDetails from "../components/CraftCardDetails";
-import Login from "../pages/Login/Login";
-import Register from "../pages/Register/Register";
 import UpdateCraftDetails from "../components/UpdateCraftDetails";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      { path: "/", element: <Home />, loader: () => fetchCrafts("home") },
-      { path: "/updateProfile", element: <PrivateRoute><UpdateProfile /></PrivateRoute> },
-      { path: "/allCraftItems", element: <AllCraftitems />, loader: () => fetchCrafts("art") },
-      { path: "/CraftCardDetails/:id", element: <PrivateRoute><CraftCardDetails /></PrivateRoute>, loader: ({ params }) => fetchCraftDetails("art", params.id) },
-      { path: "/CraftHomeCardDetails/:id", element: <PrivateRoute><CraftCardDetails /></PrivateRoute>, loader: ({ params }) => fetchCraftDetails("home", params.id) },
-      { path: "/addCraftItem", element: <PrivateRoute><AddCraftitem /></PrivateRoute> },
-      { path: "/myCraftList", element: <PrivateRoute><MyCraftList /></PrivateRoute>, loader: () => fetchCrafts("art") },
-      { path: "/updateCraftDetails/:id", element: <PrivateRoute><UpdateCraftDetails /></PrivateRoute>, loader: ({ params }) => fetchCraftDetails("art", params.id) },
-      { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
-    ],
-  },
+    {
+        path: '/',
+        element: <Root></Root>,
+        errorElement: <ErrorPage />,
+
+        children: [
+
+            {
+                path: '/',
+                element: <Home></Home>,
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/homeCrafts')
+
+            },
+          
+
+            {
+                path: '/updateProfile',
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+            },
+            {
+                path: '/allCraftItems',
+                element: <AllCraftitems></AllCraftitems>,
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
+            },
+            {
+                path: '/CraftCardDetails/:id',
+                element: <PrivateRoute><CraftCardDetails></CraftCardDetails></PrivateRoute>,
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
+            },
+            {
+                path: '/CraftHomeCardDetails/:id',
+                element: <PrivateRoute><CraftCardDetails></CraftCardDetails></PrivateRoute>,
+                loader:()=>fetch('https://art-craft-store-server-delta.vercel.app/homeCrafts')
+            },
+
+
+            {
+                path: '/addCraftItem',
+                element: <PrivateRoute><AddCraftitem></AddCraftitem></PrivateRoute>
+            },
+
+
+            {
+                path: '/myCraftList',
+                element: <PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>,
+                loader: () => fetch('https://art-craft-store-server-delta.vercel.app/artCrafts')
+
+            },
+            {
+                path: '/updateCraftDetails/:id',
+                element: <PrivateRoute><UpdateCraftDetails></UpdateCraftDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://art-craft-store-server-delta.vercel.app/artCrafts/${params.id}`)
+
+            },
+
+
+
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+        ]
+    }
+
 ]);
-
-const fetchCrafts = async (type) => {
-  const response = await fetch(`https://art-craft-store-server-delta.vercel.app/${type}Crafts`);
-  return response.json();
-};
-
-const fetchCraftDetails = async (type, id) => {
-  const response = await fetch(`https://art-craft-store-server-delta.vercel.app/${type}Crafts/${id}`);
-  return response.json();
-};
 
 export default router;

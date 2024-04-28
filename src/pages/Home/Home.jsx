@@ -26,7 +26,7 @@ const Home = () => {
             <ScrollableCard ></ScrollableCard>
             <MainCraftSection key={craft._id} craft={craft} />
             <section className="mx-auto lg:px-0 ">
-                <div className="lg:mx-20 mx-5 px-3 flex flex-col justify-center py-8 shadow-md border-2">
+                <div className="lg:mx-20 mx-5 px-3 flex flex-col justify-center py-8 shadow-md lg:border-2">
                     <section className="py-6">
                         <div data-aos="fade-up" className="grid max-w-6xl grid-cols-1 mx-auto lg:px-8 md:grid-cols-2 md:divide-x-2">
                             <div className="">
@@ -86,18 +86,21 @@ const Home = () => {
             <section className="py-6 ">
                 <div className="container p-4 mx-auto space-y-16 sm:p-10">
                     <div className="space-y-4 text-center">
-                        <h3 className="text-2xl font-bold leading-none sm:text-5xl"> <Typewriter
-                                        words={['Meet our team']}
-                                        loop={0}
-                                        typeSpeed={100}
-                                        deleteSpeed={50}
-                                        delaySpeed={2000}
-                                    /></h3>
+                        <h3 className="text-2xl font-bold leading-none sm:text-5xl">
+                            <Typewriter
+                                words={['Meet our team :']}
+                                loop={0}
+                                typeSpeed={150}
+                                deleteSpeed={0}
+                                delaySpeed={0}
+                                cursor={null} // Disable cursor for smoother typing effect
+                                typeWriterSpan={props => <span {...props} className="inline-block" />} // Wrap each letter in a span for styling
+                            /></h3>
                         <p className="md:max-w-2xl max-w-lg px-5 text-center mx-auto">
                             Our team blends diverse talents and perspectives to produce cutting-edge results, surpassing boundaries and shaping the future of your industry field.</p>
                     </div>
                     <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/xq1b5T9/download-2.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Warika Limani</h4>
@@ -121,7 +124,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/kKGtDKk/photo-1467307983825-619715426c70.jpg
 " />
                             <div className="flex flex-col items-center">
@@ -146,7 +149,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/2v8Rq9v/handsome-bearded-guy-posing-against-white-wall-273609-20597.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Sapin Rakino</h4>
@@ -170,7 +173,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/wsfDXBr/photo-1497881807663-38b9a95b7192-1.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Feseroia Jenkin</h4>
@@ -194,7 +197,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/wBWJHRP/photo-1551843073-4a9a5b6fcd5f-2.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Sonera Teriam</h4>
@@ -218,8 +221,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/NjzLS5b/download-3.jpg"/>
+                        <div data-aos="fade-up" className="space-y-4">
+                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/NjzLS5b/download-3.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Ragry Jenki</h4>
                                 <p className="text-sm ">Senior Artist</p>
@@ -242,7 +245,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/LPcM0Nj/download-1.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Leroy Rajon</h4>
@@ -266,7 +269,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos="fade-up"  className="space-y-4">
+                        <div data-aos="fade-up" className="space-y-4">
                             <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/JR0HD7R/360-F-282720917-7-Zt-Af-Eq-Ef-A6-CRT66im-V9av-GWXEg9w6-Jt.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold"> Jenkins Trudo</h4>

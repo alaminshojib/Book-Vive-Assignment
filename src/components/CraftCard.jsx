@@ -18,7 +18,7 @@ const CraftCard = ({ craft,index }) => {
 
 
         <>
-            <tr className="w-6/6 justify-between border-b border-opacity-20 border-gray-700 dark:border-gray-300 ">
+            <tr className="w-6/6  justify-between border-b border-opacity-20 border-gray-700 dark:border-gray-300 ">
 
 
                 <td className="w-1/6 items-center flex-col justify-center  text-center">
