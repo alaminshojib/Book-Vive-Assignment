@@ -73,6 +73,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
 
 
+
                         </div>
                     </div>
                     <Link to={"/"}><div className="flex gap-3 lg:text-2xl text-md rounded-xl md:p-2 items-center font-bold "><img className="w-5 h-5 lg:w-10 lg:h-10 hidden sm:block shadow-lg rounded-md" src="/assets/arts.jpg" alt="" />
