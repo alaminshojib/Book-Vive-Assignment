@@ -158,7 +158,7 @@ const Register = () => {
                         <div className=" items-center text-gray-100">
                             <hr className="border-gray-300" />
                         </div>
-                        <div className="text-sm flex items-center container-mr p-5">
+                        <div className="text-sm flex items-center container-mr text-gray-500 p-5">
                             If you already have an account..{' '}
                             <span onClick={handleLogin} className="text-[#002D74] rounded-xl hover:scale-110 font-semibold ml-2 cursor-pointer">Login</span>
                         </div>

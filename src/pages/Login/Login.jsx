@@ -125,7 +125,7 @@ const Login = () => {
                                     )}
                                 </span>
                             </div>
-                            <div className="px-2 justify-start mx-0 text-sm ">Forget password?</div>
+                            <div className="px-2 justify-start mx-0 text-sm text-gray-500">Forget password?</div>
                             <button className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" type="submit">Login</button>
                         </form>
 
@@ -151,7 +151,7 @@ const Login = () => {
                             Login with GitHub
                         </button>
 
-                        <div className="mt-4 text-sm flex items-center px-2 pb-4">
+                        <div className="mt-4 text-sm flex items-center px-2 pb-4 text-gray-500">
                             <p>If you don't have an account..</p>
                             <span onClick={handleregister} className="  text-[#002D74] rounded-xl hover:scale-110 font-semibold cursor-pointer ml-2">Register</span>
                         </div>
