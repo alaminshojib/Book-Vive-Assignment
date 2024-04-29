@@ -125,7 +125,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                                 </div>
                             </div>
                             :
-                            <div className="space-x-2 flex justify-center items-center"><NavLink className=' px-5 md:py-2 py-1 font-semibold rounded-full bg-cyan-500 ' to="/register" >Register</NavLink>
+                            <div className="space-x-2 flex justify-center items-center"><NavLink className=' px-5 py-2 mr-1 font-semibold rounded-full bg-cyan-500 ' to="/register" >Register</NavLink>
                                 <NavLink className='hidden md:block px-5 py-2 rounded-full bg-green-500 font-semibold' to="/login" >Login</NavLink></div>
                     }
                 </div>
