@@ -40,14 +40,14 @@ const CraftCardDetails = () => {
   return (
     <div>
 
-      <div className=" justify-center m-auto px-5  p-3 mb-3 min-h-screen items-center flex-col flex">
-        <section className="lg:flex dark:bg-gray-50 border  rounded-lg">
-          <div className=' p-5 flex-col items-center my-auto w-80'>
-            <img alt="Image" className="object-cover w-full rounded-2xl mx-auto p-2 my-5 " src={image} />
+      <div className=" justify-center m-auto  px-5  p-3 mb-3 min-h-screen items-center flex-col flex">
+        <section className="lg:flex  border  rounded-lg shadow-lg">
+          <div className=' p-5 flex-col items-center my-auto w-96'>
+            <img alt="Image" className="object-cover w-full rounded-2xl mx-auto " src={image} />
           </div>
 
-          <div className="flex flex-col flex-1 mx-auto drop-shadow-xl p-8 ">
-            <div className=" md:text-lg dark:text-gray-600 text-gray-600 font-semibold my-2">
+          <div className="flex flex-col flex-1 mx-auto drop-shadow-xl md:p-8 p-4">
+            <div className=" md:text-lg  font-semibold my-2">
               <span>Price : {price} TK</span>
 
             </div>

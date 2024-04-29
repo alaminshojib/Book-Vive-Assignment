@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
 import Swal from 'sweetalert2';
 
 const UpdateCraftDetails = () => {
@@ -93,7 +94,16 @@ const UpdateCraftDetails = () => {
 
     return (
         <div className='py-5'>
-            <h2 className="lg:text-3xl text-xl font-semibold text-center p-5 ">Update Art & Craft Item :</h2>
+            <h2 className="lg:text-3xl text-xl font-semibold text-center p-5 "> <Typewriter
+
+                                words={['Update Art & Craft Item :']}
+                                loop={0}
+                                typeSpeed={150}
+                                deleteSpeed={0}
+                                delaySpeed={0}
+                                cursor={null} // Disable cursor for smoother typing effect
+                                typeWriterSpan={props => <span {...props} className="inline-block" />} // Wrap each letter in a span for styling
+                            /></h2>
             <form onSubmit={handleUpdateCraft}>
                 <div className='grid lg:grid-cols-2 grid-cols-1 justify-center items-center  gap-5 md:w-2/3 w-11/12 mx-auto'>
                     <div>

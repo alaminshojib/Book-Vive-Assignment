@@ -33,7 +33,7 @@ const ScrollableCard = () => {
         <Typewriter
           words={['Painting and Drawing']}
           loop={0}
-          typeSpeed={100}
+          typeSpeed={150}
           deleteSpeed={0}
           delaySpeed={0}
           cursor={null}

@@ -36,7 +36,7 @@ const MyCraftList = () => {
                 <h1 className="font-semibold text-xl lg:text-3xl p-3"><Typewriter
                     words={['My Art & Craft List']}
                     loop={0}
-                    typeSpeed={100}
+                    typeSpeed={150}
                     deleteSpeed={0}
                     delaySpeed={0}
                     cursor={null}

@@ -22,7 +22,7 @@ const AllCraftitems = () => {
                 <h2 className=" lg:text-3xl text-xl font-semibold leading-tight text-center my-3"><Typewriter
         words={['All Art & Craft Items :']} 
         loop={0} 
-        typeSpeed={100} 
+        typeSpeed={150} 
         deleteSpeed={0} 
         delaySpeed={0} 
         cursor={null} // Disable cursor for smoother typing effect

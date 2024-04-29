@@ -89,7 +89,7 @@ const AddCraftitem = () => {
                 <h2 className='lg:text-3xl text-xl font-semibold text-center py-5'><Typewriter
         words={['Add Craft Item :']} 
         loop={0} 
-        typeSpeed={100} 
+        typeSpeed={150} 
         deleteSpeed={0} 
         delaySpeed={0} 
         cursor={null} // Disable cursor for smoother typing effect

@@ -22,7 +22,7 @@ const MainCraftSection = ({ craft }) => {
             <Typewriter
         words={['Some Best Painting and Drawing']} 
         loop={0} 
-        typeSpeed={100} 
+        typeSpeed={150} 
         deleteSpeed={0} 
         delaySpeed={0} 
         cursor={null} // Disable cursor for smoother typing effect

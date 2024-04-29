@@ -58,7 +58,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
     </>
     return (
         <div>
-            <div className="navbar bg-nav py-2 px-2 shadow-lg">
+            <div className="navbar bg-nav py-5 px-2 shadow-lg ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -69,14 +69,27 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                             <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/allCraftItems">All Art & craft Items</NavLink>
                             <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/addCraftItem">Add Craft Item</NavLink>
                             <NavLink className={'px-4 py-2 rounded-full text-gray-900 font-medium'} to="/myCraftList">My Art & Craft List</NavLink>
-                            <Link onClick={handleSignOut} className=" px-4 py-2 rounded-full  font-medium text-gray-900">Log Out</Link>
+                            {
+                                user && user ?
+                                    <Link onClick={handleSignOut} className=" px-4 py-2 mt-1 rounded-full  font-medium text-gray-900">Log Out</Link>
 
+                                    :
+                                    <Link className="px-4 py-2 rounded-full mt-1  font-medium text-gray-900" to="/login" >Login</Link>
+                            }
 
+                             <div className="container justify-end px-4 mt-1">
+                                <p className=" py-2 rounded-full  font-medium text-gray-900">Change Theme :</p>
+                    <label className="switch">
+                        <input type="checkbox" onChange={toggleTheme} checked={isDarkMode} className="toggle-checkbox" />
+                        <span className="toggle-slider"></span>
+                        <span className="toggle-icon">{isDarkMode ? <FiMoon /> : <FiSun />}</span>
+                    </label>
+                </div>
 
 
                         </div>
                     </div>
-                    <Link to={"/"}><div className="flex gap-3 lg:text-2xl text-md rounded-xl md:p-2 items-center font-bold "><img className="w-5 h-5 lg:w-10 lg:h-10 hidden sm:block shadow-lg rounded-md" src="/assets/arts.jpg" alt="" />
+                    <Link to={"/"}><div className="flex gap-3 lg:text-2xl text-md rounded-xl md:p-2 items-center font-bold "><img className="w-5 h-5 lg:w-10 lg:h-10  shadow-lg rounded-md" src="/assets/arts.jpg" alt="" />
                         C͡r͡a͡ƒ͡t͡i͡q͡u͡e </div></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -90,7 +103,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
 
 
-                <div className="container justify-end border w-fit ml-2 ">
+                <div className="container justify-end w-fit ml-2 hidden md:block">
                     <label className="switch">
                         <input type="checkbox" onChange={toggleTheme} checked={isDarkMode} className="toggle-checkbox" />
                         <span className="toggle-slider"></span>
@@ -112,8 +125,8 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                                 </div>
                             </div>
                             :
-                            <div className="space-x-2"><NavLink className={'px-5 py-3 font-semibold rounded-full bg-cyan-500 '} to="/register" >Register</NavLink>
-                                <NavLink className={'px-5 py-3 rounded-full bg-green-500 font-semibold'} to="/login" >Login</NavLink></div>
+                            <div className="space-x-2 flex justify-center items-center"><NavLink className=' px-5 md:py-2 py-1 font-semibold rounded-full bg-cyan-500 ' to="/register" >Register</NavLink>
+                                <NavLink className='hidden md:block px-5 py-2 rounded-full bg-green-500 font-semibold' to="/login" >Login</NavLink></div>
                     }
                 </div>
             </div>

@@ -34,10 +34,13 @@ const Home = () => {
                                     <Typewriter
                                         words={['Get in touch']}
                                         loop={0}
-                                        typeSpeed={100}
-                                        deleteSpeed={50}
-                                        delaySpeed={2000}
+                                        typeSpeed={150}
+                                        deleteSpeed={0}
+                                        delaySpeed={0}
+                                        cursor={null}
+                                        typeWriterSpan={props => <span {...props} className="inline-block" />}
                                     />
+                                    
                                 </h1>
                                 <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
                                 <div className="space-y-4">
