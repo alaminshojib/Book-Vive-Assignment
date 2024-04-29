@@ -76,7 +76,7 @@ const Register = () => {
                                 required
                                 name="name"
                                 placeholder="Full Name"
-                                className="mt-5 p-2 rounded-xl border"
+                                className="mt-5 p-2 rounded-xl border bg-gray-100 text-gray-800"
                                 {...register("name", { required: "Name is required" })}
                             />
                             {errors.name && <p className="text-red-500">{errors.name.message}</p>}
@@ -85,7 +85,7 @@ const Register = () => {
                                 required
                                 name="email"
                                 placeholder="Email"
-                                className="p-2 rounded-xl border"
+                                className="p-2 rounded-xl border bg-gray-100 text-gray-800"
                                 {...register("email", { required: "Email is required" })}
                             />
                             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
@@ -94,12 +94,12 @@ const Register = () => {
                                 type="text"
                                 name="photo"
                                 placeholder="Photo Url"
-                                className="p-2 rounded-xl border"
+                                className="p-2 rounded-xl border bg-gray-100 text-gray-800"
                                 {...register("photo")}
                             />
                             <div className="relative">
                                 <input
-                                    className="p-2 rounded-xl border w-full"
+                                    className="p-2 rounded-xl border w-full bg-gray-100 text-gray-800"
                                     type={showPassword ? 'text' : 'password'}
                                     id="password"
                                     name="password"
@@ -123,7 +123,7 @@ const Register = () => {
                             </div>
                             <div className="relative">
                                 <input
-                                    className="p-2 rounded-xl border w-full"
+                                    className="p-2 rounded-xl border w-full bg-gray-100 text-gray-800"
                                     type={showConfirmPassword ? 'text' : 'password'}
                                     id="confirmPassword"
                                     name="confirmPassword"

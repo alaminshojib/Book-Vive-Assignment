@@ -68,10 +68,10 @@ const Login = () => {
                         )}
 
                         <form onSubmit={handleSubmit(handleLogin)} className="flex flex-col gap-4">
-                            <input className="p-2 mt-8 rounded-xl border" type="email" name="email" placeholder="Email" {...register("email", { required: true })} />
+                            <input className="p-2 mt-8 rounded-xl border bg-gray-100 text-gray-800" type="email" name="email" placeholder="Email" {...register("email", { required: true })} />
                             {errors.email && <span className="text-red-500">Email is required</span>}
                             <div className="relative">
-                                <input className="p-2 rounded-xl border w-full" type={passwordVisible ? 'text' : 'password'}
+                                <input className="p-2 rounded-xl border w-full bg-gray-100 text-gray-800" type={passwordVisible ? 'text' : 'password'}
                                     id="password"
                                     name="password"
                                     placeholder="Password"
