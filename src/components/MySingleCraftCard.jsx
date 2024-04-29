@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Swal from "sweetalert2";
 
 const MySingleCraftCard = ({ craft, crafts, setCrafts }) => {
     const [isDeleting, setIsDeleting] = useState(false);
+    const navigate = useNavigate();
+
 
     const handleDelete = async (_id) => {
         try {
@@ -36,18 +38,17 @@ const MySingleCraftCard = ({ craft, crafts, setCrafts }) => {
                     );
                     const remaining = crafts.filter(cof => cof._id !== _id);
                     setCrafts(remaining);
+
                 }
             }
         } catch (error) {
             console.error('Error deleting craft item:', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Failed to delete craft item. Please try again later.',
-            });
+           
         } finally {
             setIsDeleting(false);
-            window.location.reload()
+
+            navigate('/myCraftList')
+
         }
     };
 
