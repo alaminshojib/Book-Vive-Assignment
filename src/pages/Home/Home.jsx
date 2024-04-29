@@ -78,7 +78,7 @@ const Home = () => {
                                     <span className="mb-1">Message</span>
                                     <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 "></textarea>
                                 </label>
-                                <button type="button" className="btn-md self-center px-8  text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 dark:bg-violet-600  focus:ring-violet-400 focus:dark:ring-violet-600 hover:ring-violet-400 hover:dark:ring-violet-600">Submit</button>
+                                <input type="Submit" className='bg-blue-500 hover:bg-green-800 cursor-pointer w-fit mx-auto px-4 py-2 rounded-md text-white' value="Submit" />
                             </form>
                         </div>
                     </section>

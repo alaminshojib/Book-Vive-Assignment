@@ -14,7 +14,7 @@ const CraftItemsSection = ({ craft }) => {
 
   return (
     <div className="drop-shadow-xl  ">
-      <article className="flex flex-col border-3 rounded-3xl shadow-md lg:w-72  px-3 py-3 my-1 h-96 justify-center mx-auto">
+      <article className="flex flex-col border-3 rounded-3xl shadow-md lg:w-72  my-1 h-96 justify-center mx-auto border">
         <div>
           <img
             alt=""

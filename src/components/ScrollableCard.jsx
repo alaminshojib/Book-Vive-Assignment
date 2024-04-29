@@ -40,11 +40,11 @@ const ScrollableCard = () => {
           typeWriterSpan={props => <span {...props} className="inline-block"/>}
         />
       </h1>
-      <div className="grid lg:grid-cols-6 sm:grid-cols-3 grid-cols-2 justify-center items-center gap-2 mt-8">
+      <div className="grid lg:grid-cols-6 sm:grid-cols-3 grid-cols-2 justify-center items-center gap-2 mt-8 ">
         {limitedCraftData.map((craftItem, index) => (
           <div
             key={index}
-            className=" rounded-lg overflow-hidden shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800"
+            className=" rounded-lg overflow-hidden shadow-lg border"
             data-aos="fade-up" 
           >
             <img src={craftItem.image} alt="Image" className="object-cover object-center w-full h-28" />
@@ -71,7 +71,7 @@ const ScrollableCard = () => {
       </div>
       <Link
         to={`/allCraftItems`}
-        className='text-blue-600 border-2 rounded-2xl mx-auto flex flex-col justify-center items-center m-5  text-lg font-medium  w-fit px-2 py-1 '
+        className='text-blue-600 shadow-md hover:bg-blue-600 hover:text-white  rounded-2xl mx-auto flex flex-col justify-center items-center m-5  text-lg font-medium  w-fit px-4 py-1 '
         data-aos="fade-up" 
       >
         See More

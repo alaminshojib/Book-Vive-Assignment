@@ -58,13 +58,13 @@ const handleBack = () => {
 	return (
 		<div className=" mx-3">
 
-<div className='sm:max-w-md  py-4 lg:py-5 flex-col sm:space-x-6 relative  md:min-h-72 mx-auto border-2 my-5 lg:my-8 rounded-3xl flex items-center justify-center shadow-md'>
+<div className='sm:max-w-md  py-4 lg:py-5 flex-col sm:space-x-6 relative  md:min-h-72 mx-auto  my-5 lg:my-8 rounded-3xl flex items-center justify-center shadow-md'>
 				<Link onClick={() => document.getElementById('my_modal_5').showModal()} className="absolute top-0 right-0 rounded-full border-2 px-3 py-1 flex items-center gap-1 m-3 hover:dark:text-violet-600"><FaEdit />Edit</Link>
 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-96  xl:w-64 border-2 shadow-md">
 	
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={user.photoURL} />
 				<div className="flex-1 my-4">
-					<p className="text-xl font-semibold leading-snug">{user.displayName}</p>
+					<p className="text-xl text-start font-semibold leading-snug">{user.displayName}</p>
 					<p className="text-sm text-start">User Id : {user.uid.slice(0,9)}</p>
 					<p  className="text-sm text-start">Creation Date : {user.metadata.creationTime.slice(0,17)}</p>
 				</div>
