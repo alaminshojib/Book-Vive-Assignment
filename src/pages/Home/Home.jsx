@@ -102,9 +102,9 @@ const Home = () => {
                         <p className="md:max-w-2xl max-w-lg px-5 text-center mx-auto">
                             Our team blends diverse talents and perspectives to produce cutting-edge results, surpassing boundaries and shaping the future of your industry field.</p>
                     </div>
-                    <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid w-full grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/xq1b5T9/download-2.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center" src="https://i.ibb.co/xq1b5T9/download-2.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Warika Limani</h4>
                                 <p className="text-sm ">Junior Artist</p>
@@ -128,7 +128,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/kKGtDKk/photo-1467307983825-619715426c70.jpg
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center" src="https://i.ibb.co/kKGtDKk/photo-1467307983825-619715426c70.jpg
 " />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Fery Tomas</h4>
@@ -153,7 +153,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/2v8Rq9v/handsome-bearded-guy-posing-against-white-wall-273609-20597.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center" src="https://i.ibb.co/2v8Rq9v/handsome-bearded-guy-posing-against-white-wall-273609-20597.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Sapin Rakino</h4>
                                 <p className="text-sm ">Senior Artist</p>
@@ -177,7 +177,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/wsfDXBr/photo-1497881807663-38b9a95b7192-1.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center" src="https://i.ibb.co/wsfDXBr/photo-1497881807663-38b9a95b7192-1.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Feseroia Jenkin</h4>
                                 <p className="text-sm ">Senior Artist</p>
@@ -201,7 +201,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center" src="https://i.ibb.co/wBWJHRP/photo-1551843073-4a9a5b6fcd5f-2.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center" src="https://i.ibb.co/wBWJHRP/photo-1551843073-4a9a5b6fcd5f-2.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Sonera Teriam</h4>
                                 <p className="text-sm ">Senior Artist</p>
@@ -225,7 +225,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/NjzLS5b/download-3.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center " src="https://i.ibb.co/NjzLS5b/download-3.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Ragry Jenki</h4>
                                 <p className="text-sm ">Senior Artist</p>
@@ -249,7 +249,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/LPcM0Nj/download-1.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center " src="https://i.ibb.co/LPcM0Nj/download-1.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold">Leroy Rajon</h4>
                                 <p className="text-sm ">Senior Artist</p>
@@ -273,7 +273,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div data-aos="fade-up" className="space-y-4">
-                            <img alt="" className="rounded-full object-cover h-44 w-44 mx-auto mb-4 bg-center " src="https://i.ibb.co/JR0HD7R/360-F-282720917-7-Zt-Af-Eq-Ef-A6-CRT66im-V9av-GWXEg9w6-Jt.jpg" />
+                            <img alt="" className="rounded-full object-cover lg:h-44 lg:w-44 w-32 h-32 mx-auto mb-4 bg-center " src="https://i.ibb.co/JR0HD7R/360-F-282720917-7-Zt-Af-Eq-Ef-A6-CRT66im-V9av-GWXEg9w6-Jt.jpg" />
                             <div className="flex flex-col items-center">
                                 <h4 className="text-xl font-semibold"> Jenkins Trudo</h4>
                                 <p className="text-sm ">Senior Artist</p>

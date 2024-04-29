@@ -11,7 +11,6 @@ const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const [error, setError] = useState('');
-    const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -20,7 +19,7 @@ const Register = () => {
         navigate('/login');
     }
 
-    const handleRegister = handleSubmit(async ({ name, email, photo, password, confirmPassword }) => {
+    const handleRegister = async ({ name, email, photo, password, confirmPassword }) => {
         try {
             setError('');
             setLoading(true);
@@ -39,10 +38,15 @@ const Register = () => {
             await updateProfile(result.user, { displayName: name, photoURL: photo });
             await logOut();
     
-            setSuccess(true);
+            Swal.fire({
+                title: "Success!",
+                text: "Registration completed successfully!",
+                icon: "success"
+            });
+
             setTimeout(() => {
                 navigate('/login')
-            }, 1500);
+            }, 500);
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
                 setError('This email is already registered. Please use a different email address.');
@@ -52,7 +56,7 @@ const Register = () => {
         } finally {
             setLoading(false);
         }
-    });
+    };
     
 
     return (
@@ -62,20 +66,11 @@ const Register = () => {
                     <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
                 </div>
             )}
-            {success && (
-               Swal.fire({
-                title: "Success!",
-                text: "Registration completed successfully!",
-                icon: "success"
-              })
-               
-
-            )}
             <section>
-                <div className="shadow-lg my-5 rounded-2xl flex items-center p-3 mx-auto">
+                <div className="shadow-lg my-3 rounded-2xl flex items-center p-3 mx-auto">
                     <div className="px-4 mx-auto justify-center items-center border rounded-xl bg-gray-300">
                         <h2 className="font-bold text-3xl text-[#002D74] mt-5 text-center">Register</h2>
-                        <form onSubmit={handleRegister} className="flex flex-col gap-4 w-72">
+                        <form onSubmit={handleSubmit(handleRegister)} className="flex flex-col gap-4 w-72">
                             <input
                                 type="text"
                                 required

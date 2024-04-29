@@ -58,7 +58,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
     </>
     return (
         <div>
-            <div className="navbar bg-nav py-5 px-2 shadow-lg ">
+            <div className="navbar bg-nav py-3 px-3 shadow-lg ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -118,7 +118,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                             <div className="flex gap-4 items-center justify-center">
 
                                 <Link to={"/updateProfile"} className="w-7 h-7 rounded-full tooltip" data-tip={user.displayName}>
-                                    <img alt="" className=" rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100" src={user.photoURL} />
+                                    <img alt="" className=" rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100 w-full h-full" src={user.photoURL} />
                                 </Link>
                                 <div>
                                     <button onClick={handleSignOut} className="hidden md:block text-white px-5 py-2 rounded-full  bg-[#0632c3] hover:bg-[#57f0f0]  font-semibold hover:text-black ">Log Out</button>
