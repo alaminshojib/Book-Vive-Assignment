@@ -103,7 +103,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
 
 
-                <div className="container justify-end w-fit ml-2 hidden md:block">
+                <div className="container justify-end w-fit ml-2 hidden lg:block">
                     <label className="switch">
                         <input type="checkbox" onChange={toggleTheme} checked={isDarkMode} className="toggle-checkbox" />
                         <span className="toggle-slider"></span>
