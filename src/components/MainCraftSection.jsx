@@ -20,7 +20,7 @@ const MainCraftSection = ({ craft }) => {
     <div>
       <section >
         <div>
-          <h1 className='mx-auto flex flex-col justify-center items-center m-5 md:text-3xl text-2xl font-medium  w-fit rounded-lg p-1 '>
+          <h1 className='mx-auto flex flex-col justify-center items-center m-5 md:text-3xl text-lg font-medium  w-fit rounded-lg p-1 '>
             <Typewriter
               words={['Select Painting and Drawing Subcategory']} 
               loop={0} 

@@ -30,7 +30,7 @@ const Home = () => {
                     <section className="py-6">
                         <div data-aos="fade-up" className="grid max-w-6xl grid-cols-1 mx-auto lg:px-8 md:grid-cols-2 md:divide-x-2">
                             <div className="">
-                                <h1 className="text-3xl font-bold">
+                                <h1 className="md:text-3xl text-xl font-bold">
                                     <Typewriter
                                         words={['Get in touch']}
                                         loop={0}

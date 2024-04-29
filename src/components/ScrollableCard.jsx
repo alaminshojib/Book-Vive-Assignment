@@ -27,7 +27,7 @@ const ScrollableCard = () => {
   return (
     <div className='mt-8 px-5'>
       <h1
-        className='mx-auto flex flex-col justify-center items-center m-5 md:text-3xl text-2xl font-bold  w-fit rounded-lg p-1'
+        className='mx-auto flex flex-col justify-center items-center md:m-5 m-2 md:text-3xl text-xl font-bold  w-fit rounded-lg p-1'
         data-aos="fade-up" // Apply fade-up animation to this element
       >
         <Typewriter
