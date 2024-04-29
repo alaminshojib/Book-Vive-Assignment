@@ -68,15 +68,15 @@ const Home = () => {
                             <form data-aos="fade-up" noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                                 <label className="block">
                                     <span className="mb-1">Full name</span>
-                                    <input type="text" placeholder="Leroy Jenkins" className="p-1 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 " />
+                                    <input type="text" placeholder="Leroy Jenkins" className="p-1 block px-2 bg-gray-100 text-gray-800 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 " />
                                 </label>
                                 <label className="block">
                                     <span className="mb-1">Email address</span>
-                                    <input type="email" placeholder="leroy@jenkins.com" className="p-1 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 " />
+                                    <input type="email" placeholder="leroy@jenkins.com" className="p-1 px-2 bg-gray-100 text-gray-800 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 " />
                                 </label>
                                 <label className="block">
                                     <span className="mb-1">Message</span>
-                                    <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 "></textarea>
+                                    <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 px-2 p-1 bg-gray-100 text-gray-800 focus:ring-violet-400 focus:dark:ring-violet-600 "></textarea>
                                 </label>
                                 <input type="Submit" className='bg-blue-500 hover:bg-green-800 cursor-pointer w-fit mx-auto px-4 py-2 rounded-md text-white' value="Submit" />
                             </form>

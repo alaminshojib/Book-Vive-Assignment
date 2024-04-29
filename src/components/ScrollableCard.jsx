@@ -31,9 +31,9 @@ const ScrollableCard = () => {
         data-aos="fade-up" // Apply fade-up animation to this element
       >
         <Typewriter
-          words={['Painting and Drawing']}
+          words={['Welcome to Painting and Drawing']}
           loop={0}
-          typeSpeed={150}
+          typeSpeed={250}
           deleteSpeed={0}
           delaySpeed={0}
           cursor={null}
