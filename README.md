@@ -36,14 +36,14 @@ Server GitHub Repository Link: [C͡r͡a͡ƒ͡t͡i͡q͡u͡e Repository](https://g
 
 To run this project locally, follow these steps:
 
-1. Clone this repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd art-craft-store`
-3. Install dependencies for both frontend and backend:
-4. Set up environment variables:
-- Create a `.env` file in the `frontend` directory and add necessary environment variables.
-- Create a `.env` file in the `backend` directory and add necessary environment variables.
-5. Start the frontend and backend servers:
-6. Open your browser and navigate to `http://localhost:3000` to view the application.
+- Clone this repository: `git clone <repository-url>`
+- Navigate to the project directory: `cd art-craft-store`
+- Install dependencies for both frontend and backend:
+- Set up environment variables:
+1. Create a `.env` file in the `frontend` directory and add necessary environment variables.
+2. Create a `.env` file in the `backend` directory and add necessary environment variables.
+- Start the frontend and backend servers:
+- Open your browser and navigate to `http://localhost:3000` to view the application.
 
 ## Contributing
 
